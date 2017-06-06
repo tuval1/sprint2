@@ -6,17 +6,15 @@ header {
   position: relative;
 
   nav {
-    width: 550px;
+    width: 530px;
     height: 60px;
     margin: 0 auto;
     font-size: 14px;
 
-    li {
-      display: inline-block;
-      line-height: 60px;
-      margin: 0 20px;
 
       a {
+        display: inline-block;
+        //line-height: 60px;
         text-transform: uppercase;
 
         &:hover {
@@ -39,4 +37,3 @@ header {
     top: 10px;
     //padding: 0 30px;
   }
-}

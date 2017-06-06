@@ -489,24 +489,23 @@ header {
   color: #fff;
   position: relative; }
   header nav {
-    width: 550px;
+    width: 530px;
     height: 60px;
     margin: 0 auto;
     font-size: 14px; }
-    header nav li {
+    header nav a {
       display: inline-block;
-      line-height: 60px;
-      margin: 0 20px; }
-      header nav li a {
-        text-transform: uppercase; }
-        header nav li a:hover {
-          color: #2ab499;
-          text-decoration: underline; }
-  header .header-triangle {
-    position: absolute;
-    left: 45.5%;
-    top: 60px; }
-  header .header-logo {
-    position: absolute;
-    left: 46.6%;
-    top: 10px; }
+      text-transform: uppercase; }
+      header nav a:hover {
+        color: #2ab499;
+        text-decoration: underline; }
+
+.header-triangle {
+  position: absolute;
+  left: 45.5%;
+  top: 60px; }
+
+.header-logo {
+  position: absolute;
+  left: 46.6%;
+  top: 10px; }
