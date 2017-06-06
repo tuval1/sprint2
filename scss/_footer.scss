@@ -1,0 +1,29 @@
+footer {
+
+  width: 820px;
+
+  h4 {
+    font-family: "Maven Pro Regular", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .footer-form {
+
+    width: 580px;
+
+    form {
+
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+

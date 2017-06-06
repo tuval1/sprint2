@@ -3,12 +3,12 @@
 
 var gImgs = [
     { id: 1, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 2, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 3, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 4, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 2, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 3, url: 'assets/img/1.jpg',keyword:[] },
-    { id: 4, url: 'assets/img/1.jpg',keyword:[] }
+    { id: 2, url: 'assets/img/2.jpg',keyword:[] },
+    { id: 3, url: 'assets/img/3.jpg',keyword:[] },
+    { id: 4, url: 'assets/img/4.jpg',keyword:[] },
+    { id: 2, url: 'assets/img/5.jpg',keyword:[] },
+    { id: 3, url: 'assets/img/6.jpg',keyword:[] },
+    { id: 4, url: 'assets/img/7.jpg',keyword:[] }
 ];
 
 function renderImgList(){
@@ -32,6 +32,7 @@ function createHex(img) {
     return hex;
 }
 
+var el = document.querySelector('#hex');
+var div = createHex(gImgs[0]);
+el.append(div);
 renderImgList();
-// var el = document.querySelector('.team-hex');
-// el.append(createHex(gImgs[0]));
