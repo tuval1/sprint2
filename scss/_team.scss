@@ -5,5 +5,49 @@
 
   .team-content {
     width: 820px;
+
+    .team-hex {
+      border-left: 1px solid #219d84;
+      padding-left: 20px;
+    }
+
+    .team-about {
+      margin-left: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #219d84;
+
+      h4 {
+        margin: 50px 0 8px 0;
+        padding: 0;
+        color: #d7fcf5;
+        font-family: var(--secondary-font), sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+      }
+
+      h5 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: #20816d;
+        font-family: "Maven Pro Regular", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: #d7fcf5;
+        text-align: justify;
+        font-family: Lato, sans-serif;
+        font-size: 12px;
+        letter-spacing: .1em;
+        line-height: 1.4em;
+      }
+
+      .logos {
+
+      }
+    }
   }
 }

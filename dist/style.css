@@ -430,7 +430,7 @@ template {
 
 /*----------  Maven pro Font  ----------*/
 @font-face {
-  font-family: 'Maven pro';
+  font-family: 'Maven Pro Regular';
   src: url("../assets/fonts/maven/MavenPro-Regular.ttf");
   font-weight: 400; }
 
@@ -440,7 +440,7 @@ template {
   --inner-container-width: 900px;
   /* Fonts */
   --primary-font: Lato;
-  --secondary-font: Maven pro;
+  --secondary-font: Maven Pro Regular;
   /* Colors */
   --main-color: #626262;
   --sections-bg: #f0f0f0; }
@@ -464,6 +464,9 @@ template {
 
 .justify-center {
   justify-content: center; }
+
+.justify-end {
+  justify-content: flex-end; }
 
 .space-between {
   justify-content: space-between; }
@@ -579,3 +582,33 @@ header {
   background-color: #2eb398; }
   .team .team-content {
     width: 820px; }
+    .team .team-content .team-hex {
+      border-left: 1px solid #219d84;
+      padding-left: 20px; }
+    .team .team-content .team-about {
+      margin-left: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #219d84; }
+      .team .team-content .team-about h4 {
+        margin: 50px 0 8px 0;
+        padding: 0;
+        color: #d7fcf5;
+        font-family: var(--secondary-font), sans-serif;
+        font-weight: 400;
+        font-size: 30px; }
+      .team .team-content .team-about h5 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: #20816d;
+        font-family: "Maven Pro Regular", sans-serif;
+        font-size: 18px;
+        font-weight: 400; }
+      .team .team-content .team-about p {
+        margin: 0;
+        padding: 0;
+        color: #d7fcf5;
+        text-align: justify;
+        font-family: Lato, sans-serif;
+        font-size: 12px;
+        letter-spacing: .1em;
+        line-height: 1.4em; }
