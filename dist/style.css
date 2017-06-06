@@ -489,17 +489,14 @@ header {
   color: #fff;
   position: relative; }
   header nav {
-    width: 50%;
+    width: 550px;
     height: 60px;
     margin: 0 auto;
     font-size: 14px; }
     header nav li {
+      display: inline-block;
       line-height: 60px;
       margin: 0 20px; }
-      header nav li:nth-child(2) {
-        margin-right: 20px; }
-      header nav li:nth-child(3) {
-        margin-left: 20px; }
       header nav li a {
         text-transform: uppercase; }
         header nav li a:hover {
