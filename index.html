@@ -14,12 +14,11 @@
     <nav class="clean-list flex justify-center space-between align-center">
         <a href="">home</a>
         <a href="">About us</a>
-        <img src="assets/img/logo.png" alt="">
+        <div class="square"><img src="assets/img/logo.png" alt=""></div>
         <a href="">Sometext</a>
         <a href="">Contacts</a>
     </nav>
 
-    <!--<img class="header-triangle" src="assets/img/triangle.png" alt=""> -->
 </header>
 <div class="container">
     <!--thumb list-->
@@ -28,9 +27,9 @@
     <!--thumb list end-->
 </div>
 <div class="team flex justify-center">
-    <div class="team-content flex justify-center space-between">
-        <div class="team-hex" id="hex">
-
+    <div class="team-content flex justify-center space-between align-center">
+        <div class="team-hex flex justify-center align-center" id="hex">
+            <img src="assets/img/smith.png" alt="">
         </div>
         <div class="team-about">
             <h4>Tuval</h4>
@@ -54,28 +53,30 @@
     </div>
 </div>
 <footer>
-    <div class="container">
-        <h4>Get In Touch</h4>
-        <p>In order to get in touch use the contact form below:</p>
-        <div class="footer-form">
-            <form action="">
-                <label for="name">
-                    <input type="text" id="name" placeholder="Name(Required)">
-                </label><br>
-                <label for="email">
-                    <input type="email" id="email" placeholder="Email(Required)">
-                </label><br>
-                <label for="name">
-                    <input type="text" id="subject" placeholder="Subject">
-                </label><br>
-                <label for="name">
-                    <textarea name="" id="" cols="30" rows="10">
-                        Write your message here...
+    <div class="cont">
+        <div class="inner-container">
+            <h4>Get In Touch</h4>
+            <p>In order to get in touch use the contact form below:</p>
+            <div class="footer-form">
+                <form action="">
+                    <label for="name">
+                        <input type="text" id="name" placeholder="Name(Required)">
+                    </label><br>
+                    <label for="email">
+                        <input type="email" id="email" placeholder="Email(Required)">
+                    </label><br>
+                    <label for="subject">
+                        <input type="text" id="subject" placeholder="Subject">
+                    </label><br>
+                    <label for="text">
+                    <textarea name="text" id="text" placeholder="Write your message here..." cols="30" rows="7">
                     </textarea>
-                </label>
-            </form>
+                    </label>
+                    <button>send</button>
+                </form>
+            </div>
+            <div class="footer-content"></div>
         </div>
-        <div class="footer-content"></div>
     </div>
 </footer>
 <script src="js/script.js"></script>

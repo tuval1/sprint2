@@ -579,19 +579,19 @@ header {
 .team {
   width: 100%;
   margin-top: 50px;
-  padding: 15px;
+  padding: 40px;
   background-color: #2eb398; }
   .team .team-content {
     width: 820px; }
     .team .team-content .team-hex {
       border-left: 1px solid #219d84;
-      padding-left: 20px; }
+      padding: 10px 0 10px 20px; }
     .team .team-content .team-about {
       margin-left: 20px;
       padding-right: 20px;
       border-right: 1px solid #219d84; }
       .team .team-content .team-about h4 {
-        margin: 50px 0 8px 0;
+        margin: 15px 0 8px 0;
         padding: 0;
         color: #d7fcf5;
         font-family: var(--secondary-font), sans-serif;
@@ -605,7 +605,7 @@ header {
         font-size: 18px;
         font-weight: 400; }
       .team .team-content .team-about p {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         padding: 0;
         color: #d7fcf5;
         text-align: justify;
@@ -632,3 +632,97 @@ header {
         height: 24px;
         line-height: 24px;
         color: #fff; }
+
+.team {
+  width: 100%;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: #2eb398; }
+  .team .team-content {
+    width: 820px; }
+    .team .team-content .team-hex {
+      border-left: 1px solid #219d84;
+      padding: 10px 0 10px 20px; }
+    .team .team-content .team-about {
+      margin-left: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #219d84; }
+      .team .team-content .team-about h4 {
+        margin: 15px 0 8px 0;
+        padding: 0;
+        color: #d7fcf5;
+        font-family: var(--secondary-font), sans-serif;
+        font-weight: 400;
+        font-size: 30px; }
+      .team .team-content .team-about h5 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: #20816d;
+        font-family: "Maven Pro Regular", sans-serif;
+        font-size: 18px;
+        font-weight: 400; }
+      .team .team-content .team-about p {
+        margin-bottom: 20px;
+        padding: 0;
+        color: #d7fcf5;
+        text-align: justify;
+        font-family: Lato, sans-serif;
+        font-size: 12px;
+        letter-spacing: .1em;
+        line-height: 1.4em; }
+      .team .team-content .team-about .logos li {
+        text-align: center; }
+        .team .team-content .team-about .logos li:nth-child(1) {
+          background-color: #3360a1; }
+        .team .team-content .team-about .logos li:nth-child(2) {
+          background-color: #29abe2; }
+        .team .team-content .team-about .logos li:nth-child(3) {
+          background-color: #dd5341; }
+        .team .team-content .team-about .logos li:nth-child(4) {
+          background-color: #cc1b22; }
+        .team .team-content .team-about .logos li:nth-child(5) {
+          background-color: #026c9c; }
+        .team .team-content .team-about .logos li:nth-child(6) {
+          background-color: #f15690; }
+      .team .team-content .team-about .logos a {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff; }
+
+footer {
+  padding: 15px 30px;
+  background-color: #323232; }
+  footer .cont {
+    padding-top: 50px;
+    border-bottom: 1px solid #2b2b2b;
+    border-top: 1px solid #2b2b2b; }
+    footer .cont .inner-container {
+      width: 820px; }
+      footer .cont .inner-container h4 {
+        margin: 0;
+        padding: 0;
+        font-family: var(--secondary-font), sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #e1e1e1; }
+      footer .cont .inner-container p {
+        margin: 0;
+        padding: 0;
+        font-family: var(--secondary-font), sans-serif;
+        font-size: 18px; }
+      footer .cont .inner-container .footer-form {
+        width: 580px; }
+        footer .cont .inner-container .footer-form form input, footer .cont .inner-container .footer-form form textarea {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: none;
+          box-sizing: border-box;
+          background-color: #454545;
+          color: #bebebe; }
+          footer .cont .inner-container .footer-form form input::placeholder, footer .cont .inner-container .footer-form form textarea::placeholder {
+            font-family: var(--primary-font);
+            font-size: 16px;
+            color: #bebebe; }

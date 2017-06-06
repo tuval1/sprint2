@@ -1,27 +1,57 @@
 footer {
 
-  width: 820px;
+  padding: 15px 30px;
+  background-color: #323232;
 
-  h4 {
-    font-family: "Maven Pro Regular", sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-  }
+  .cont {
 
-  .footer-form {
+    padding-top: 50px;
+    border-bottom: 1px solid #2b2b2b;
+    border-top: 1px solid #2b2b2b;
 
-    width: 580px;
+    .inner-container {
 
-    form {
+      width: 820px;
 
-      input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+      h4 {
+        margin: 0;
+        padding: 0;
+        font-family: var(--secondary-font), sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #e1e1e1;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-family: var(--secondary-font), sans-serif;
+        font-size: 18px;
+      }
+
+      .footer-form {
+
+        width: 580px;
+
+        form {
+
+          input, textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            box-sizing: border-box;
+            background-color: #454545;
+            color: #bebebe;
+
+            &::placeholder {
+              font-family: var(--primary-font);
+              font-size: 16px;
+              color: #bebebe;
+            }
+          }
+        }
       }
     }
   }
