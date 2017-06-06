@@ -18,11 +18,6 @@ function renderImgList(){
     });
 }
 
-// function renderItem(selector) {
-//     var el = document.querySelector(selector);
-//     el.append(createHex(gImgs[0]));
-// }
-
 function createHex(img) {
 
     var hex = document.createElement('div');
@@ -34,18 +29,9 @@ function createHex(img) {
     hex.append(hex2);
     hex.append(hex3);
     hex.style.backgroundImage = `url(${img.url})`;
-    console.dir(hex.style);
     return hex;
 }
 
-function render( strHtml, selector ){
-    // var el       = document.querySelector(selector);
-    // el.innerHTML = strHtml;
-    var elems = document.querySelectorAll('.hexagon');
-    console.log(elems);
-    elems[0].style.backgroundImage = gImgs[0].url;
-}
-
 renderImgList();
-var el = document.querySelector('.team-hex');
-el.append(createHex(gImgs[0]));
+// var el = document.querySelector('.team-hex');
+// el.append(createHex(gImgs[0]));

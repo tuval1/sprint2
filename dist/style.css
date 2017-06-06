@@ -515,16 +515,13 @@ header {
       header nav a:hover {
         color: #2ab499;
         text-decoration: underline; }
+    header nav img {
+      margin-top: 4px; }
 
 .header-triangle {
   position: absolute;
   left: 45.7%;
   top: 60px; }
-
-.header-logo {
-  position: absolute;
-  left: 46.6%;
-  top: 10px; }
 
 .thumb-list {
   /*counter transform the bg image on the caps*/ }
@@ -587,7 +584,6 @@ header {
   .team .team-content {
     width: 820px; }
     .team .team-content .team-hex {
-      width: 50%;
       border-left: 1px solid #219d84;
       padding-left: 20px; }
     .team .team-content .team-about {
@@ -609,7 +605,7 @@ header {
         font-size: 18px;
         font-weight: 400; }
       .team .team-content .team-about p {
-        margin: 0;
+        margin-bottom: 40px;
         padding: 0;
         color: #d7fcf5;
         text-align: justify;
@@ -617,3 +613,22 @@ header {
         font-size: 12px;
         letter-spacing: .1em;
         line-height: 1.4em; }
+      .team .team-content .team-about .logos li {
+        text-align: center; }
+        .team .team-content .team-about .logos li:nth-child(1) {
+          background-color: #3360a1; }
+        .team .team-content .team-about .logos li:nth-child(2) {
+          background-color: #29abe2; }
+        .team .team-content .team-about .logos li:nth-child(3) {
+          background-color: #dd5341; }
+        .team .team-content .team-about .logos li:nth-child(4) {
+          background-color: #cc1b22; }
+        .team .team-content .team-about .logos li:nth-child(5) {
+          background-color: #026c9c; }
+        .team .team-content .team-about .logos li:nth-child(6) {
+          background-color: #f15690; }
+      .team .team-content .team-about .logos a {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff; }

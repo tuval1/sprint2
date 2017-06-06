@@ -12,26 +12,24 @@ header {
     margin: 0 auto;
     font-size: 14px;
 
-      a {
-        display: inline-block;
-        text-transform: uppercase;
+    a {
+      display: inline-block;
+      text-transform: uppercase;
 
-        &:hover {
-          color: #2ab499;
-          text-decoration: underline;
-        }
+      &:hover {
+        color: #2ab499;
+        text-decoration: underline;
       }
     }
-  }
+    img {
+      margin-top: 4px;
+    }
 
-  .header-triangle {
-    position: absolute;
-    left: 45.7%;
-    top: 60px;
   }
+}
 
-  .header-logo {
-    position: absolute;
-    left: 46.6%;
-    top: 10px;
-  }
+.header-triangle {
+  position: absolute;
+  left: 45.7%;
+  top: 60px;
+}

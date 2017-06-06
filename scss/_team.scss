@@ -8,7 +8,7 @@
     width: 820px;
 
     .team-hex {
-      width: 50%;
+      //width: 50%;
       border-left: 1px solid #219d84;
       padding-left: 20px;
     }
@@ -37,7 +37,7 @@
       }
 
       p {
-        margin: 0;
+        margin-bottom: 40px;
         padding: 0;
         color: #d7fcf5;
         text-align: justify;
@@ -48,8 +48,44 @@
       }
 
       .logos {
+        li {
+          text-align: center;
+
+          &:nth-child(1) {
+            background-color: #3360a1;
+          }
+
+          &:nth-child(2) {
+            background-color: #29abe2;
+          }
+
+          &:nth-child(3) {
+            background-color: #dd5341;
+          }
+
+          &:nth-child(4) {
+            background-color: #cc1b22;
+          }
+
+          &:nth-child(5) {
+            background-color: #026c9c;
+          }
+
+          &:nth-child(6) {
+            background-color: #f15690;
+          }
+        }
+
+
+          a {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            color: #fff;
+
+          }
+        }
 
       }
     }
-  }
 }
