@@ -23,4 +23,4 @@ function render( strHtml, selector ){
 }
 
 
-render( createImgList(), '.container' );
+// render( createImgList(), '.container' );
