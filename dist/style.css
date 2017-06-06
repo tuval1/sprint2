@@ -489,7 +489,7 @@ header {
   color: #fff;
   position: relative; }
   header nav {
-    width: 530px;
+    width: 40%;
     height: 60px;
     margin: 0 auto;
     font-size: 14px; }
@@ -502,7 +502,7 @@ header {
 
 .header-triangle {
   position: absolute;
-  left: 45.5%;
+  left: 45.7%;
   top: 60px; }
 
 .header-logo {
