@@ -482,3 +482,34 @@ fieldset {
   margin: 0; }
 
 /* Components */
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #323232;
+  color: #fff;
+  position: relative; }
+  header nav {
+    width: 50%;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 14px; }
+    header nav li {
+      line-height: 60px;
+      margin: 0 20px; }
+      header nav li:nth-child(2) {
+        margin-right: 20px; }
+      header nav li:nth-child(3) {
+        margin-left: 20px; }
+      header nav li a {
+        text-transform: uppercase; }
+        header nav li a:hover {
+          color: #2ab499;
+          text-decoration: underline; }
+  header .header-triangle {
+    position: absolute;
+    left: 45.5%;
+    top: 60px; }
+  header .header-logo {
+    position: absolute;
+    left: 46.6%;
+    top: 10px; }
