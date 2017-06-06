@@ -2,10 +2,13 @@
 
 
 var gImgs = [
-    { id: 1, url: 'assets/img/1.jpg',keyword:[] }
-    // { id: 2, url: '1.jpg',keyword:[] },
-    // { id: 3, url: '1.jpg',keyword:[] },
-    // { id: 4, url: '1.jpg',keyword:[] }
+    { id: 1, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 2, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 3, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 4, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 2, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 3, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 4, url: 'assets/img/1.jpg',keyword:[] }
 ];
 
 function createImgList(){

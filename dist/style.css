@@ -422,13 +422,25 @@ template {
   src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
   font-weight: 400; }
 
+/*----------  Lato Font  ----------*/
+@font-face {
+  font-family: 'Lato';
+  src: url("../assets/fonts/lato/Lato-Regular.ttf");
+  font-weight: 400; }
+
+/*----------  Maven pro Font  ----------*/
+@font-face {
+  font-family: 'Maven pro';
+  src: url("../assets/fonts/maven/MavenPro-Regular.ttf");
+  font-weight: 400; }
+
 :root {
   /* Layout */
   --container-width: 1063px;
   --inner-container-width: 900px;
   /* Fonts */
-  --primary-font: Playfair;
-  --secondary-font: Ubuntu;
+  --primary-font: Lato;
+  --secondary-font: Maven pro;
   /* Colors */
   --main-color: #626262;
   --sections-bg: #f0f0f0; }
@@ -487,7 +499,8 @@ header {
   height: 60px;
   background-color: #323232;
   color: #fff;
-  position: relative; }
+  position: relative;
+  margin-bottom: 100px; }
   header nav {
     width: 40%;
     height: 60px;
@@ -559,3 +572,10 @@ header {
   width: 200px;
   height: 200px;
   margin: -80px 0 0 20px; }
+
+.team {
+  width: 100%;
+  padding: 15px;
+  background-color: #2eb398; }
+  .team .team-content {
+    width: 820px; }
