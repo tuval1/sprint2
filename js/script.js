@@ -2,13 +2,13 @@
 
 
 var gImgs = [
-    {id: 1, url: 'assets/img/1.jpg', keyword: ['sad']},
-    {id: 2, url: 'assets/img/2.jpg', keyword: ['animal']},
+    {id: 1, url: 'assets/img/1.jpg', keyword: ['sad','dog']},
+    {id: 2, url: 'assets/img/2.jpg', keyword: ['animal','sad']},
     {id: 3, url: 'assets/img/3.jpg', keyword: ['animal', 'cat']},
     {id: 4, url: 'assets/img/4.jpg', keyword: ['animal']},
     {id: 5, url: 'assets/img/5.jpg', keyword: ['animal', 'dog']},
     {id: 6, url: 'assets/img/6.jpg', keyword: ['animal', 'dog']},
-    {id: 7, url: 'assets/img/7.jpg', keyword: ['animal']}
+    {id: 7, url: 'assets/img/7.jpg', keyword: ['animal','funny', 'sarcasm']}
 ];
 
 function renderImgList() {
@@ -55,9 +55,20 @@ function searchPopularWords() {
 }
 
 function renderPopularWords() {
-    
-}
+    var el = document.querySelector('.popular-words');
+    var words = searchPopularWords();
+    var strHtml ='';
 
+    for (var word in words) {
+        var link = document.createElement('a');
+        link.href = "#";
+        link.innerText = word;
+        link.title = word;
+        link.style.fontSize = words[word] + 20 + 'px';
+        link.setAttribute('onclick', word);
+        el.append(link);
+    }
+}
 
 $(document).ready(function () {
     $('.btn-left').click(function (e) {
@@ -78,4 +89,4 @@ $(document).ready(function () {
 // var div = createHex(gImgs[0]);
 // el.append(div);
 renderImgList();
-console.log(search());
+renderPopularWords();

@@ -761,3 +761,9 @@ footer {
           margin-bottom: 5px; }
         footer .cont .inner-container .content .footer-content i {
           margin-right: 10px; }
+
+.popular-words {
+  margin: 30px auto; }
+  .popular-words a {
+    display: inline-block;
+    margin-right: 20px; }
