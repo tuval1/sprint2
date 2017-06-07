@@ -2,24 +2,19 @@
 
 
 var gImgs = [
-    { id: 1, url: 'assets/img/1.jpg',keyword:[''] },
-    { id: 2, url: 'assets/img/2.jpg',keyword:['animal'] },
-    { id: 3, url: 'assets/img/3.jpg',keyword:['animal','cat'] },
-    { id: 4, url: 'assets/img/4.jpg',keyword:['animal'] },
-    { id: 5, url: 'assets/img/5.jpg',keyword:['animal','dog'] },
-    { id: 6, url: 'assets/img/6.jpg',keyword:['animal','dog'] },
-    { id: 7, url: 'assets/img/7.jpg',keyword:['animal'] }
-    // { id: 8, url: 'assets/img/3.jpg',keyword:[] },
-    // { id: 9, url: 'assets/img/4.jpg',keyword:[] },
-    // { id: 10, url: 'assets/img/5.jpg',keyword:[] },
-    // { id: 11, url: 'assets/img/6.jpg',keyword:[] },
-    // { id: 12, url: 'assets/img/7.jpg',keyword:[] }
+    {id: 1, url: 'assets/img/1.jpg', keyword: ['sad']},
+    {id: 2, url: 'assets/img/2.jpg', keyword: ['animal']},
+    {id: 3, url: 'assets/img/3.jpg', keyword: ['animal', 'cat']},
+    {id: 4, url: 'assets/img/4.jpg', keyword: ['animal']},
+    {id: 5, url: 'assets/img/5.jpg', keyword: ['animal', 'dog']},
+    {id: 6, url: 'assets/img/6.jpg', keyword: ['animal', 'dog']},
+    {id: 7, url: 'assets/img/7.jpg', keyword: ['animal']}
 ];
 
-function renderImgList(){
+function renderImgList() {
     var el = document.querySelector('.thumb-list');
-    gImgs.forEach(function( img  ){
-        el.append(createHex(img ))
+    gImgs.forEach(function (img) {
+        el.append(createHex(img))
     });
 }
 
@@ -35,8 +30,7 @@ function createHex(img) {
     hex.append(hex3);
     hex.style.backgroundImage = `url(${img.url})`;
 
-
-    hex.setAttribute('onclick', 'setCanvasImg(this,'+ img.id + ')');
+    hex.setAttribute('onclick', 'setCanvasImg(this,' + img.id + ')');
     return hex;
 }
 
@@ -44,30 +38,35 @@ function startGenImg(el, idx) {
     console.log('Start gen', idx);
 }
 
-function search() {
+function searchPopularWords() {
 
-   var modes = {};
+    return gImgs.reduce(function (res, img) {
+        (img.keyword).forEach(function (word) {
+            var isFounded = false;
+            for (var item in res) {
+                if (word === item) {
+                    isFounded = true;
+                }
+            }
+            isFounded ? res[word]++ : res[word] = 1;
+        });
+        return res;
+    }, {});
+}
 
-   // gImgs.forEach(function(img) {
-   //     (img.keyword).forEach(function (item){
-   //        for(var word in modes) {
-   //            if ()
-   //        }
-   //     });
-   // });
-
+function renderPopularWords() {
+    
 }
 
 
-
 $(document).ready(function () {
-    $('.btn-left').click(function(e) {
+    $('.btn-left').click(function (e) {
         e.preventDefault();
         $('.team-content2').slideToggle(1000);
         $('.team-content1').slideToggle(1000);
     });
 
-    $('.btn-right').click(function(e) {
+    $('.btn-right').click(function (e) {
         e.preventDefault();
         $('.team-content2').slideToggle(1000);
         $('.team-content1').slideToggle(1000);
@@ -75,10 +74,8 @@ $(document).ready(function () {
 });
 
 
-
-
-
 // var el = document.querySelector('#hex');
 // var div = createHex(gImgs[0]);
 // el.append(div);
 renderImgList();
+console.log(search());
