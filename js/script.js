@@ -2,18 +2,18 @@
 
 
 var gImgs = [
-    { id: 1, url: 'assets/img/1.jpg',keyword:['sad'] },
-    { id: 2, url: 'assets/img/2.jpg',keyword:[] },
-    { id: 3, url: 'assets/img/3.jpg',keyword:[] },
-    { id: 4, url: 'assets/img/4.jpg',keyword:[] },
-    { id: 5, url: 'assets/img/5.jpg',keyword:[] },
-    { id: 6, url: 'assets/img/6.jpg',keyword:[] },
-    { id: 7, url: 'assets/img/7.jpg',keyword:[] },
-    { id: 8, url: 'assets/img/3.jpg',keyword:[] },
-    { id: 9, url: 'assets/img/4.jpg',keyword:[] },
-    { id: 10, url: 'assets/img/5.jpg',keyword:[] },
-    { id: 11, url: 'assets/img/6.jpg',keyword:[] },
-    { id: 12, url: 'assets/img/7.jpg',keyword:[] }
+    { id: 1, url: 'assets/img/1.jpg',keyword:[''] },
+    { id: 2, url: 'assets/img/2.jpg',keyword:['animal'] },
+    { id: 3, url: 'assets/img/3.jpg',keyword:['animal','cat'] },
+    { id: 4, url: 'assets/img/4.jpg',keyword:['animal'] },
+    { id: 5, url: 'assets/img/5.jpg',keyword:['animal','dog'] },
+    { id: 6, url: 'assets/img/6.jpg',keyword:['animal','dog'] },
+    { id: 7, url: 'assets/img/7.jpg',keyword:['animal'] }
+    // { id: 8, url: 'assets/img/3.jpg',keyword:[] },
+    // { id: 9, url: 'assets/img/4.jpg',keyword:[] },
+    // { id: 10, url: 'assets/img/5.jpg',keyword:[] },
+    // { id: 11, url: 'assets/img/6.jpg',keyword:[] },
+    // { id: 12, url: 'assets/img/7.jpg',keyword:[] }
 ];
 
 function renderImgList(){
@@ -36,12 +36,20 @@ function createHex(img) {
     hex.style.backgroundImage = `url(${img.url})`;
 
 
-    hex.setAttribute('onclick', 'startGenImg(this,'+ img.id + ')');
+    hex.setAttribute('onclick', 'setCanvasImg(this,'+ img.id + ')');
     return hex;
 }
 
 function startGenImg(el, idx) {
     console.log('Start gen', idx);
+}
+
+function search() {
+
+    // gImgs.reduce(function (img) {
+    //
+    // }, {});
+    
 }
 
 $(document).ready(function () {
