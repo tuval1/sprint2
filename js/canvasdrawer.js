@@ -4,7 +4,7 @@ var gCanvasImg    = document.querySelector('.start-image');
 var gImagesPath = 'assets/img/';
 
 
-var deviceWidth  = window.innerWidth;;
+var deviceWidth  = window.innerWidth;
 var canvasWidth  = Math.min(600, deviceWidth - 20);
 var canvasHeight = Math.min(480, deviceWidth - 20);
 //set width to the canvas
@@ -23,7 +23,7 @@ gCanvasStyle = {
   lineJoin: 'round',
   txtXpos: canvasWidth / 2,
   txtYpos: canvasHeight - (canvasHeight / 4.5)
-}
+};
 
 
 //change text inside the canvas on live
@@ -39,7 +39,7 @@ gCanvasImg.onload = function () {
 
   // Draw it
   gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
-}
+};
 
 function setStyle() {
   gCtx.lineWidth   = gCanvasStyle.lineWidth;
