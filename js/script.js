@@ -55,7 +55,7 @@ function searchPopularWords() {
 }
 
 function renderPopularWords() {
-    var el = document.querySelector('.popular-words');
+    var el = document.querySelector('.thumb-wrapper');
     var words = searchPopularWords();
     var strHtml ='';
 

@@ -47,73 +47,76 @@
 //    height: 200px;
 //    margin: -80px 0 0 20px;
 //    }
-.thumb-list {
+.thumb-wrapper {
 
-  .hexagon {
-    position: relative;
-    width: 160px;
-    height: 92.38px;
-    margin: 46.19px 0;
-    background-image: url(http://csshexagon.com/img/meow.jpg);
-    background-size: auto 184.7521px;
-    background-position: center;
+  .thumb-list {
+
+    .hexagon {
+      position: relative;
+      width: 160px;
+      height: 92.38px;
+      margin: 46.19px 0;
+      background-image: url(http://csshexagon.com/img/meow.jpg);
+      background-size: auto 184.7521px;
+      background-position: center;
+    }
+
+    .hexTop,
+    .hexBottom {
+      position: absolute;
+      z-index: 1;
+      width: 113.14px;
+      height: 113.14px;
+      overflow: hidden;
+      -webkit-transform: scaleY(0.5774) rotate(-45deg);
+      -ms-transform: scaleY(0.5774) rotate(-45deg);
+      transform: scaleY(0.5774) rotate(-45deg);
+      background: inherit;
+      left: 23.43px;
+    }
+
+    /*counter transform the bg image on the caps*/
+    .hexTop:after,
+    .hexBottom:after {
+      content: "";
+      position: absolute;
+      width: 160.0000px;
+      height: 92.37604307034013px;
+      -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
+      -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
+      transform: rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      background: inherit;
+    }
+
+    .hexTop {
+      top: -56.5685px;
+    }
+
+    .hexTop:after {
+      background-position: center top;
+    }
+
+    .hexBottom {
+      bottom: -56.5685px;
+    }
+
+    .hexBottom:after {
+      background-position: center bottom;
+    }
+
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      top: 0.0000px;
+      left: 0;
+      width: 160.0000px;
+      height: 92.3760px;
+      z-index: 2;
+      background: inherit;
+    }
+
   }
-
-  .hexTop,
-  .hexBottom {
-    position: absolute;
-    z-index: 1;
-    width: 113.14px;
-    height: 113.14px;
-    overflow: hidden;
-    -webkit-transform: scaleY(0.5774) rotate(-45deg);
-    -ms-transform: scaleY(0.5774) rotate(-45deg);
-    transform: scaleY(0.5774) rotate(-45deg);
-    background: inherit;
-    left: 23.43px;
-  }
-
-  /*counter transform the bg image on the caps*/
-  .hexTop:after,
-  .hexBottom:after {
-    content: "";
-    position: absolute;
-    width: 160.0000px;
-    height: 92.37604307034013px;
-    -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
-    -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
-    transform:          rotate(45deg) scaleY(1.7321) translateY(-46.1880px);
-    -webkit-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    background: inherit;
-  }
-
-  .hexTop {
-    top: -56.5685px;
-  }
-
-  .hexTop:after {
-    background-position: center top;
-  }
-
-  .hexBottom {
-    bottom: -56.5685px;
-  }
-
-  .hexBottom:after {
-    background-position: center bottom;
-  }
-
-  .hexagon:after {
-    content: "";
-    position: absolute;
-    top: 0.0000px;
-    left: 0;
-    width: 160.0000px;
-    height: 92.3760px;
-    z-index: 2;
-    background: inherit;
-  }
-
 }
