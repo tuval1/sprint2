@@ -58,6 +58,8 @@ function search() {
 
 }
 
+
+
 $(document).ready(function () {
     $('.btn-left').click(function(e) {
         e.preventDefault();

@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Canvas Painter</title>
+    
+    <link rel="stylesheet" href="dist/canvas.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+   
+</head>
+<body>
+     
+  <div id="container">
+     <div class="paint-area">
+         <!--set default image on the canvas-->
+	 <img style="display: none;" src="assets/img/1.jpg" alt="" class="start-image"/>	
+        <!--canvas object area-->
+         <canvas id="my-canvas" width="490" height="220"></canvas>
+		 
+
+		 <div class="thumbs">
+            <img src="assets/img/3.jpg" data-img="3.jpg" onclick="setCanvasImg(this)">
+            <img src="assets/img/2.jpg" data-img="2.jpg" onclick="setCanvasImg(this)">
+		 </div>
+
+            <input id="custom-text" type="text" value="enter some text"/>
+    
+    <div class="style-icons">
+        <i class="fa fa-align-left" aria-hidden="true" onclick="changeStyle('LEFT')"></i>
+        <i class="fa fa-align-center" aria-hidden="true" onclick="changeStyle('CENTER')"></i>
+        <i class="fa fa-align-right" aria-hidden="true" onclick="changeStyle('RIGHT')"></i>
+        <i class="fa fa-plus" aria-hidden="true" onclick="changeStyle('tPlus')"></i>
+        <i class="fa fa-minus" aria-hidden="true" onclick="changeStyle('tMinus')"></i>
+        <i class="fa fa-trash" aria-hidden="true" onclick="clearInput();"></i>
+        <input type="color" id="text-color" onclick="changeStyle('tColor')">
+        <input type="color" id="stroke-color" onclick="changeStyle('stkColor')">    
+    </div>
+    <!--send changes-->
+        <button onclick="draw()">Send</button>
+    </div>
+  </div>
+<script src="js/canvasdrawer.js"></script>
+<script>
+setStyle();
+</script>
+</body>
+</html>
