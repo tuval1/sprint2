@@ -411,6 +411,9 @@ template {
   display: block;
   width: 100%; }
 
+.hidden {
+  display: none; }
+
 /*----------  Playfair Font  ----------*/
 @font-face {
   font-family: 'Playfair';
@@ -762,8 +765,23 @@ footer {
         footer .cont .inner-container .content .footer-content i {
           margin-right: 10px; }
 
+<<<<<<< HEAD
 .popular-words {
   margin: 30px auto; }
   .popular-words a {
     display: inline-block;
     margin-right: 20px; }
+=======
+.canvas-area {
+  position: relative; }
+  .canvas-area .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer; }
+  .canvas-area .tools-editor {
+    margin: 50px 0 0 0; }
+  .canvas-area .style-icons {
+    flex-direction: column;
+    float: right; }
+>>>>>>> c598b97b9dc84c245101e78762493f3c80fc2336
