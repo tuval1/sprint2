@@ -44,6 +44,8 @@ function startGenImg(el, idx) {
     console.log('Start gen', idx);
 }
 
+
+
 var el = document.querySelector('#hex');
 var div = createHex(gImgs[0]);
 el.append(div);

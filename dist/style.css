@@ -518,11 +518,6 @@ header {
     header nav img {
       margin-top: 4px; }
 
-.header-triangle {
-  position: absolute;
-  left: 45.7%;
-  top: 60px; }
-
 .thumb-list {
   /*counter transform the bg image on the caps*/ }
   .thumb-list .hexagon {
@@ -581,6 +576,9 @@ header {
   margin-top: 50px;
   padding: 40px;
   background-color: #2eb398; }
+  .team .btn-left, .team .btn-right {
+    margin: 0 20px;
+    font-size: 30px; }
   .team .team-content {
     width: 820px; }
     .team .team-content .team-hex {
@@ -638,6 +636,9 @@ header {
   margin-top: 50px;
   padding: 40px;
   background-color: #2eb398; }
+  .team .btn-left, .team .btn-right {
+    margin: 0 20px;
+    font-size: 30px; }
   .team .team-content {
     width: 820px; }
     .team .team-content .team-hex {
@@ -708,14 +709,13 @@ footer {
         font-weight: 400;
         color: #e1e1e1; }
       footer .cont .inner-container p {
-        margin: 0;
+        margin: 0 0 20px 0;
         padding: 0;
         font-family: var(--secondary-font), sans-serif;
-        font-size: 18px;
-        margin-bottom: 20px; }
-      footer .cont .inner-container .footer-form {
-        width: 580px; }
-        footer .cont .inner-container .footer-form form input, footer .cont .inner-container .footer-form form textarea {
+        font-size: 18px; }
+      footer .cont .inner-container .content .footer-form {
+        width: 60%; }
+        footer .cont .inner-container .content .footer-form form input, footer .cont .inner-container .content .footer-form form textarea {
           width: 100%;
           padding: 12px 20px;
           margin: 8px 0;
@@ -724,11 +724,24 @@ footer {
           box-sizing: border-box;
           background-color: #454545;
           color: #bebebe; }
-          footer .cont .inner-container .footer-form form input::placeholder, footer .cont .inner-container .footer-form form textarea::placeholder {
+          footer .cont .inner-container .content .footer-form form input::placeholder, footer .cont .inner-container .content .footer-form form textarea::placeholder {
             font-family: var(--primary-font);
             font-size: 16px;
             color: #bebebe; }
-        footer .cont .inner-container .footer-form form .btn {
+        footer .cont .inner-container .content .footer-form form .btn {
           width: 90px;
-          line-height: 35px;
-          background-color: #2eb398; }
+          line-height: 20px;
+          background-color: #2eb398;
+          box-sizing: border-box;
+          padding: 8px 0; }
+      footer .cont .inner-container .content .footer-content {
+        width: 35%;
+        text-align: justify;
+        color: #e0e0e0; }
+        footer .cont .inner-container .content .footer-content p {
+          padding-top: 5px;
+          font-size: 16px; }
+        footer .cont .inner-container .content .footer-content div {
+          margin-bottom: 5px; }
+        footer .cont .inner-container .content .footer-content i {
+          margin-right: 10px; }

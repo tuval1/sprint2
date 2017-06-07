@@ -18,7 +18,7 @@
         <a href="">Sometext</a>
         <a href="">Contacts</a>
     </nav>
-
+    <div class="header-triangle"></div>
 </header>
 <div class="container">
     <!--thumb list-->
@@ -26,7 +26,8 @@
     </div>
     <!--thumb list end-->
 </div>
-<div class="team flex justify-center">
+<div class="team flex justify-center align-center">
+    <a href="" class="btn-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
     <div class="team-content flex justify-center space-between align-center">
         <div class="team-hex flex justify-center align-center" id="hex">
             <img src="assets/img/smith.png" alt="">
@@ -51,34 +52,55 @@
             </ul>
         </div>
     </div>
+    <a href="" class="btn-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 </div>
 <footer>
     <div class="cont">
         <div class="inner-container">
             <h4>Get In Touch</h4>
             <p>In order to get in touch use the contact form below:</p>
-            <div class="footer-form">
-                <form action="">
-                    <label for="name">
-                        <input type="text" id="name" placeholder="Name(Required)">
-                    </label><br>
-                    <label for="email">
-                        <input type="email" id="email" placeholder="Email(Required)">
-                    </label><br>
-                    <label for="subject">
-                        <input type="text" id="subject" placeholder="Subject">
-                    </label><br>
-                    <label for="text">
+            <div class="content flex justify-center space-between">
+                <div class="footer-form">
+                    <form class="" action="">
+                        <label for="name">
+                            <input type="text" id="name" placeholder="Name(Required)">
+                        </label><br>
+                        <label for="email">
+                            <input type="email" id="email" placeholder="Email(Required)">
+                        </label><br>
+                        <label for="subject">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </label><br>
+                        <label for="text">
                     <textarea name="text" id="text" placeholder="Write your message here..." cols="30" rows="7">
                     </textarea>
-                    </label>
-                    <input class="btn" type="submit" value="send">
-                </form>
+                        </label>
+                        <input class="btn" type="submit" value="send">
+                    </form>
+                </div>
+                <div class="footer-content">
+                    <p>
+                        Quisque Hendrerit: purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+                        Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae.
+                    </p>
+                    <div class="address">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span class="">Elm St. 14/05 Lost City</span><br>
+                    </div>
+                    <div class="tel">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="">+ 3528 331 86 35 </span><br>
+                    </div>
+                    <div class="email">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <span class="email">info@hexalcorp.com</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-content"></div>
         </div>
     </div>
 </footer>
+<script src="assets/lib/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 
