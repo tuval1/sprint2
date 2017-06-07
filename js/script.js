@@ -2,7 +2,7 @@
 
 
 var gImgs = [
-    { id: 1, url: 'assets/img/1.jpg',keyword:[] },
+    { id: 1, url: 'assets/img/1.jpg',keyword:['sad'] },
     { id: 2, url: 'assets/img/2.jpg',keyword:[] },
     { id: 3, url: 'assets/img/3.jpg',keyword:[] },
     { id: 4, url: 'assets/img/4.jpg',keyword:[] },
@@ -44,9 +44,25 @@ function startGenImg(el, idx) {
     console.log('Start gen', idx);
 }
 
+$(document).ready(function () {
+    $('.btn-left').click(function(e) {
+        e.preventDefault();
+        $('.team-content2').slideToggle(1000);
+        $('.team-content1').slideToggle(1000);
+    });
+
+    $('.btn-right').click(function(e) {
+        e.preventDefault();
+        $('.team-content2').slideToggle(1000);
+        $('.team-content1').slideToggle(1000);
+    });
+});
 
 
-var el = document.querySelector('#hex');
-var div = createHex(gImgs[0]);
-el.append(div);
+
+
+
+// var el = document.querySelector('#hex');
+// var div = createHex(gImgs[0]);
+// el.append(div);
 renderImgList();

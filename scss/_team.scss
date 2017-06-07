@@ -9,7 +9,24 @@
     font-size: 30px;
   }
 
-  .team-content {
+  .team-content2 {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .shown {
+    display: block;
+  }
+
+  .collapsed {
+    height: 0;
+  }
+
+
+  .team-content1,.team-content2  {
     width: 820px;
 
     .team-hex {

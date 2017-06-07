@@ -579,30 +579,38 @@ header {
   .team .btn-left, .team .btn-right {
     margin: 0 20px;
     font-size: 30px; }
-  .team .team-content {
+  .team .team-content2 {
+    display: none; }
+  .team .hidden {
+    display: none; }
+  .team .shown {
+    display: block; }
+  .team .collapsed {
+    height: 0; }
+  .team .team-content1, .team .team-content2 {
     width: 820px; }
-    .team .team-content .team-hex {
+    .team .team-content1 .team-hex, .team .team-content2 .team-hex {
       border-left: 1px solid #219d84;
       padding: 10px 0 10px 20px; }
-    .team .team-content .team-about {
+    .team .team-content1 .team-about, .team .team-content2 .team-about {
       margin-left: 20px;
       padding-right: 20px;
       border-right: 1px solid #219d84; }
-      .team .team-content .team-about h4 {
+      .team .team-content1 .team-about h4, .team .team-content2 .team-about h4 {
         margin: 15px 0 8px 0;
         padding: 0;
         color: #d7fcf5;
         font-family: var(--secondary-font), sans-serif;
         font-weight: 400;
         font-size: 30px; }
-      .team .team-content .team-about h5 {
+      .team .team-content1 .team-about h5, .team .team-content2 .team-about h5 {
         margin: 0 0 20px 0;
         padding: 0;
         color: #20816d;
         font-family: "Maven Pro Regular", sans-serif;
         font-size: 18px;
         font-weight: 400; }
-      .team .team-content .team-about p {
+      .team .team-content1 .team-about p, .team .team-content2 .team-about p {
         margin-bottom: 20px;
         padding: 0;
         color: #d7fcf5;
@@ -611,21 +619,21 @@ header {
         font-size: 12px;
         letter-spacing: .1em;
         line-height: 1.4em; }
-      .team .team-content .team-about .logos li {
+      .team .team-content1 .team-about .logos li, .team .team-content2 .team-about .logos li {
         text-align: center; }
-        .team .team-content .team-about .logos li:nth-child(1) {
+        .team .team-content1 .team-about .logos li:nth-child(1), .team .team-content2 .team-about .logos li:nth-child(1) {
           background-color: #3360a1; }
-        .team .team-content .team-about .logos li:nth-child(2) {
+        .team .team-content1 .team-about .logos li:nth-child(2), .team .team-content2 .team-about .logos li:nth-child(2) {
           background-color: #29abe2; }
-        .team .team-content .team-about .logos li:nth-child(3) {
+        .team .team-content1 .team-about .logos li:nth-child(3), .team .team-content2 .team-about .logos li:nth-child(3) {
           background-color: #dd5341; }
-        .team .team-content .team-about .logos li:nth-child(4) {
+        .team .team-content1 .team-about .logos li:nth-child(4), .team .team-content2 .team-about .logos li:nth-child(4) {
           background-color: #cc1b22; }
-        .team .team-content .team-about .logos li:nth-child(5) {
+        .team .team-content1 .team-about .logos li:nth-child(5), .team .team-content2 .team-about .logos li:nth-child(5) {
           background-color: #026c9c; }
-        .team .team-content .team-about .logos li:nth-child(6) {
+        .team .team-content1 .team-about .logos li:nth-child(6), .team .team-content2 .team-about .logos li:nth-child(6) {
           background-color: #f15690; }
-      .team .team-content .team-about .logos a {
+      .team .team-content1 .team-about .logos a, .team .team-content2 .team-about .logos a {
         width: 24px;
         height: 24px;
         line-height: 24px;
@@ -639,30 +647,38 @@ header {
   .team .btn-left, .team .btn-right {
     margin: 0 20px;
     font-size: 30px; }
-  .team .team-content {
+  .team .team-content2 {
+    display: none; }
+  .team .hidden {
+    display: none; }
+  .team .shown {
+    display: block; }
+  .team .collapsed {
+    height: 0; }
+  .team .team-content1, .team .team-content2 {
     width: 820px; }
-    .team .team-content .team-hex {
+    .team .team-content1 .team-hex, .team .team-content2 .team-hex {
       border-left: 1px solid #219d84;
       padding: 10px 0 10px 20px; }
-    .team .team-content .team-about {
+    .team .team-content1 .team-about, .team .team-content2 .team-about {
       margin-left: 20px;
       padding-right: 20px;
       border-right: 1px solid #219d84; }
-      .team .team-content .team-about h4 {
+      .team .team-content1 .team-about h4, .team .team-content2 .team-about h4 {
         margin: 15px 0 8px 0;
         padding: 0;
         color: #d7fcf5;
         font-family: var(--secondary-font), sans-serif;
         font-weight: 400;
         font-size: 30px; }
-      .team .team-content .team-about h5 {
+      .team .team-content1 .team-about h5, .team .team-content2 .team-about h5 {
         margin: 0 0 20px 0;
         padding: 0;
         color: #20816d;
         font-family: "Maven Pro Regular", sans-serif;
         font-size: 18px;
         font-weight: 400; }
-      .team .team-content .team-about p {
+      .team .team-content1 .team-about p, .team .team-content2 .team-about p {
         margin-bottom: 20px;
         padding: 0;
         color: #d7fcf5;
@@ -671,21 +687,21 @@ header {
         font-size: 12px;
         letter-spacing: .1em;
         line-height: 1.4em; }
-      .team .team-content .team-about .logos li {
+      .team .team-content1 .team-about .logos li, .team .team-content2 .team-about .logos li {
         text-align: center; }
-        .team .team-content .team-about .logos li:nth-child(1) {
+        .team .team-content1 .team-about .logos li:nth-child(1), .team .team-content2 .team-about .logos li:nth-child(1) {
           background-color: #3360a1; }
-        .team .team-content .team-about .logos li:nth-child(2) {
+        .team .team-content1 .team-about .logos li:nth-child(2), .team .team-content2 .team-about .logos li:nth-child(2) {
           background-color: #29abe2; }
-        .team .team-content .team-about .logos li:nth-child(3) {
+        .team .team-content1 .team-about .logos li:nth-child(3), .team .team-content2 .team-about .logos li:nth-child(3) {
           background-color: #dd5341; }
-        .team .team-content .team-about .logos li:nth-child(4) {
+        .team .team-content1 .team-about .logos li:nth-child(4), .team .team-content2 .team-about .logos li:nth-child(4) {
           background-color: #cc1b22; }
-        .team .team-content .team-about .logos li:nth-child(5) {
+        .team .team-content1 .team-about .logos li:nth-child(5), .team .team-content2 .team-about .logos li:nth-child(5) {
           background-color: #026c9c; }
-        .team .team-content .team-about .logos li:nth-child(6) {
+        .team .team-content1 .team-about .logos li:nth-child(6), .team .team-content2 .team-about .logos li:nth-child(6) {
           background-color: #f15690; }
-      .team .team-content .team-about .logos a {
+      .team .team-content1 .team-about .logos a, .team .team-content2 .team-about .logos a {
         width: 24px;
         height: 24px;
         line-height: 24px;
