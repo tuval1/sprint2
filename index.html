@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="dist/canvas.css">
 </head>
 
-<body>
+<body onload="init()">
 <header>
     <nav class="clean-list flex justify-center space-between align-center">
         <a href="">home</a>
@@ -46,20 +46,37 @@
     <div class="tools-editor">
         
         <div class="style-icons flex">
-            <button onclick="changeStyle('LEFT')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
-            <button onclick="changeStyle('CENTER')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
-            <button onclick="changeStyle('RIGHT')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
-            <button onclick="changeStyle('tPlus')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
-            <button onclick="changeStyle('tMinus')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
+            <button onclick="alignText('bottom','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
+            <button onclick="alignText('bottom','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
+            <button onclick="alignText('bottom','right')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
+            <button onclick="increaseFont('bottom')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+            <button onclick="decreaseFont('bottom')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
             <button onclick="clearInput();"><i class="fa fa-trash" aria-hidden="true" ></i></button>
-            <input type="color" id="text-color" onclick="changeStyle('tColor')"></button>
-            <input type="color" id="stroke-color" onclick="changeStyle('stkColor')">    </button>
+            <input type="color" id="text-color" onclick="changeStyle('bottom','tColor')"></button>
+            <input type="color" id="stroke-color" onclick="changeStyle('bottom','stkColor')">    </button>
+            <div>
+            <input id="bottom-text" type="text" placeholder="enter some text"/><br>
+            <button onclick="draw()">Send</button><button onclick="download()">download</button>
+            </div>
         </div>
 
-        <div>
-            <input id="custom-text" type="text" placeholder="enter some text"/>    
-            <button onclick="draw()">Send</button>
+        <!--top text tool editor-->
+        <div class="style-icons flex">
+            <button onclick="alignText('top','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
+            <button onclick="alignText('top','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
+            <button onclick="alignText('top','right')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
+            <button onclick="increaseFont('top')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+            <button onclick="decreaseFont('top')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
+            <button onclick="clearInput();"><i class="fa fa-trash" aria-hidden="true" ></i></button>
+            <input type="color" id="text-color" onclick="changeStyle('top','tColor')"></button>
+            <input type="color" id="stroke-color" onclick="changeStyle('top','stkColor')">    </button>
+            <div>
+            <input id="text-top" type="text" placeholder="enter some text"/><br>
+            <button onclick="draw()">Send</button><button onclick="download()">download</button>
+            </div>
         </div>
+
+        
     </div>
     <!--end tool editor-->
 </div>
