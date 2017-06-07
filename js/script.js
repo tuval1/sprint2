@@ -46,10 +46,16 @@ function startGenImg(el, idx) {
 
 function search() {
 
-    // gImgs.reduce(function (img) {
-    //
-    // }, {});
-    
+   var modes = {};
+
+   // gImgs.forEach(function(img) {
+   //     (img.keyword).forEach(function (item){
+   //        for(var word in modes) {
+   //            if ()
+   //        }
+   //     });
+   // });
+
 }
 
 $(document).ready(function () {
