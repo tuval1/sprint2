@@ -61,6 +61,9 @@ function setStyle() {
 // }
 
 function setCanvasImg( el, imgId ) {
+  var thumbArea = document.querySelector('.thumb-wrapper');
+  thumbArea.classList.add('hidden');
+
   var imgUrl = getImgUrl( imgId );
 
   gCtx.clearRect(0, 0, canvasWidth, canvasHeight);

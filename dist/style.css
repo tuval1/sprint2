@@ -411,6 +411,9 @@ template {
   display: block;
   width: 100%; }
 
+.hidden {
+  display: none; }
+
 /*----------  Playfair Font  ----------*/
 @font-face {
   font-family: 'Playfair';
@@ -761,3 +764,16 @@ footer {
           margin-bottom: 5px; }
         footer .cont .inner-container .content .footer-content i {
           margin-right: 10px; }
+
+.canvas-area {
+  position: relative; }
+  .canvas-area .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer; }
+  .canvas-area .tools-editor {
+    margin: 50px 0 0 0; }
+  .canvas-area .style-icons {
+    flex-direction: column;
+    float: right; }
