@@ -7,6 +7,7 @@
     <title>Coding Academy</title>
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/canvas.css">
 </head>
 
 <body>
@@ -25,6 +26,29 @@
     <div class="thumb-list flex flex-wrap justify-center space-between">
     </div>
     <!--thumb list end-->
+
+    <!--canvas area-->
+<div class="canvas-area">
+    <!--set default image on the canvas-->
+    <img style="display: none;" src="assets/img/1.jpg" alt="" class="start-image"/>	
+    
+    <canvas id="my-canvas" width="490" height="220"></canvas>
+    <input id="custom-text" type="text" value="enter some text"/>
+
+    <div class="style-icons">
+        <i class="fa fa-align-left" aria-hidden="true" onclick="changeStyle('LEFT')"></i>
+        <i class="fa fa-align-center" aria-hidden="true" onclick="changeStyle('CENTER')"></i>
+        <i class="fa fa-align-right" aria-hidden="true" onclick="changeStyle('RIGHT')"></i>
+        <i class="fa fa-plus" aria-hidden="true" onclick="changeStyle('tPlus')"></i>
+        <i class="fa fa-minus" aria-hidden="true" onclick="changeStyle('tMinus')"></i>
+        <i class="fa fa-trash" aria-hidden="true" onclick="clearInput();"></i>
+        <input type="color" id="text-color" onclick="changeStyle('tColor')">
+        <input type="color" id="stroke-color" onclick="changeStyle('stkColor')">    
+    </div>
+    <button onclick="draw()">Send</button>
+</div>
+<!--end canvas area-->
+
 </div>
 <div class="team flex justify-center align-center">
     <a href="" class="btn-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
@@ -126,6 +150,7 @@
 </footer>
 <script src="assets/lib/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/canvasdrawer.js"></script>
 </body>
 
 </html>

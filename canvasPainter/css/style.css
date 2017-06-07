@@ -1,0 +1,10 @@
+.thumbs {
+width:200px;
+}
+
+.thumbs img {
+width:100%;
+}
+canvas {
+    border:1px solid;
+}
