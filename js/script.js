@@ -125,31 +125,22 @@ function sliderTeam() {
         event.preventDefault();
         elTeamContent1.style.display = 'none';
         elTeamContent2.style.display = 'flex';
+        elSlideLeft.style.display = 'hidden';
+        elSlideRight.style.display = 'block';
+        // elTeamContent1.style.display = (elTeamContent1.style.display === 'none') ? 'flex' : 'none';
+        // elTeamContent2.style.display = (elTeamContent2.style.display === 'none') ? 'flex' : 'none';
     }
 
     function moveRight(event){
         event.preventDefault();
-        // elTeamContent1.style.transform.rotate = -1;
         elTeamContent1.style.display = 'flex';
         elTeamContent2.style.display = 'none';
+        elSlideRight.style.display = 'hidden';
+        elSlideLeft.style.display = 'block';
+        // elTeamContent1.style.display = (elTeamContent1.style.display === 'none') ? 'flex' : 'none';
+        // elTeamContent2.style.display = (elTeamContent2.style.display === 'none') ? 'flex' : 'none';
+
     }
-}
-
-function makeDevImg(selector) {
-    var elDev = document.querySelector(selector);
-    // var elDev2 = document.querySelector('.team-content2 > .team-hex');
-
-    var hex = document.createElement('div');
-    hex.classList.add('hexagon');
-    var hex2 = document.createElement('div');
-    hex2.classList.add('hexTop');
-    var hex3 = document.createElement('div');
-    hex3.classList.add('hexBottom');
-    hex.append(hex2);
-    hex.append(hex3);
-    hex.style.backgroundImage = url('ass');
-    hex.setAttribute('onclick', 'setCanvasImg(this,' + img.id + ')');
-    return hex;
 }
 
 function toggleDisplayCanvas( el, action ){
@@ -163,6 +154,5 @@ function toggleDisplayCanvas( el, action ){
         canvasArea.classList.add('hidden');
         thumbArea.classList.remove('hidden');
       }
-    
   }
 }

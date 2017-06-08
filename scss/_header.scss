@@ -24,18 +24,21 @@ header {
     img {
       margin-top: 4px;
     }
+    
+    .square {
+      width: 64px;
+      height: 64px;
+      background-color: #323232;
+      transform: rotate(45deg);
+
+      .square-img {
+        transform: rotate(-45deg);
+      }
+    }
 
   }
 }
 
-//.header-triangle {
-//  width: 60px;
-//  height: 60px;
-//  background-color: #323232;
-//  transform: rotate(45deg);
-//  position: absolute;
-//  left: 45.7%;
-//  top: 60px;
-//}
+
 
 

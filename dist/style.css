@@ -523,6 +523,13 @@ header {
         text-decoration: underline; }
     header nav img {
       margin-top: 4px; }
+    header nav .square {
+      width: 64px;
+      height: 64px;
+      background-color: #323232;
+      transform: rotate(45deg); }
+      header nav .square .square-img {
+        transform: rotate(-45deg); }
 
 .thumb-wrapper .thumb-list {
   /*counter transform the bg image on the caps*/ }
