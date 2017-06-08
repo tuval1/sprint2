@@ -1,0 +1,40 @@
+.popular-words{
+
+}
+
+@media (max-width: 1100px) {
+    .popular-words {
+        justify-content: center;
+    }
+}
+@media (min-width: 1100px) {
+    .popular-words {
+        justify-content: space-between;
+    }
+}
+@media (max-width:768px){
+    .footer-form{
+        width: 100%;
+    }
+    .footer-content {
+        width: 100%;
+    }
+    .hexagon{
+        margin: 50.19px 9px;
+    }
+}
+@media (min-width:768px){
+     .footer-form{
+        width: 60%;
+    }
+    header nav {
+        width: 40%;
+    }
+    .footer-content {
+        margin:74px 0 0 10px;
+        width: 35%;
+    }    
+    .hexagon{
+        margin: 30.19px 9px;
+    }
+}
