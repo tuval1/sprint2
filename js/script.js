@@ -11,22 +11,32 @@ var gImgs = [
     {id: 7, url: 'assets/img/7.jpg', keyword: ['animal','funny', 'sarcasm']}
 ];
 
+ var thumbArea;
+ var canvasArea;
+ var searchArea;
 
 function init(){  
+    initCanvasSelectors();
+    addCanvasTxtListener();
 //set width to the canvas
   gCanvas.width  = canvasWidth;
-  gCanvas.height = canvasHeight;
-
-  
+  gCanvas.height = canvasHeight;  
 // When the image has loaded...
-gCanvasImg.onload = function () {
+  gCanvasImg.onload = function () {
   // Work out where to center it
   var x = gCanvas.width / 2 - gCanvasImg.width / 2;
   var y = gCanvas.height / 2 - gCanvasImg.height / 2;
 
   // Draw it
-  gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
+  gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);  
 };
+//page selectors
+  thumbArea  = document.querySelector('.thumb-wrapper');
+  canvasArea = document.querySelector('#canvas-wrapper');
+  searchArea = document.querySelector('.popular-words');
+
+  
+  
 
   renderImgsList(gImgs, '.thumb-list');
   renderPopularWords();
@@ -144,15 +154,18 @@ function sliderTeam() {
 }
 
 function toggleDisplayCanvas( el, action ){
-  var thumbArea  = document.querySelector('.thumb-wrapper');
-  var canvasArea = document.querySelector('.canvas-wrapper');
+  
   if( el === CANVAS ){
-      if( action === SHOW ){
-        canvasArea.classList.remove('hidden');
+    
+      if( action === SHOW ){    
+        canvasArea.classList = 'animated bounceInRight';
         thumbArea.classList.add('hidden');
+        searchArea.classList.add('hidden');
       } else {
+        canvasArea.classList = 'slideOutDown animated';        
         canvasArea.classList.add('hidden');
         thumbArea.classList.remove('hidden');
+        searchArea.classList.remove('hidden');
       }
   }
 }
