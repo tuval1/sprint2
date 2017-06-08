@@ -521,18 +521,18 @@ header {
     header nav img {
       margin-top: 4px; }
 
-.thumb-list {
+.thumb-wrapper .thumb-list {
   /*counter transform the bg image on the caps*/ }
-  .thumb-list .hexagon {
+  .thumb-wrapper .thumb-list .hexagon {
     position: relative;
     width: 160px;
     height: 92.38px;
-    margin: 46.19px 0;
+    margin: 46.19px 15px;
     background-image: url(http://csshexagon.com/img/meow.jpg);
     background-size: auto 184.7521px;
     background-position: center; }
-  .thumb-list .hexTop,
-  .thumb-list .hexBottom {
+  .thumb-wrapper .thumb-list .hexTop,
+  .thumb-wrapper .thumb-list .hexBottom {
     position: absolute;
     z-index: 1;
     width: 113.14px;
@@ -543,8 +543,8 @@ header {
     transform: scaleY(0.5774) rotate(-45deg);
     background: inherit;
     left: 23.43px; }
-  .thumb-list .hexTop:after,
-  .thumb-list .hexBottom:after {
+  .thumb-wrapper .thumb-list .hexTop:after,
+  .thumb-wrapper .thumb-list .hexBottom:after {
     content: "";
     position: absolute;
     width: 160.0000px;
@@ -556,15 +556,15 @@ header {
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     background: inherit; }
-  .thumb-list .hexTop {
+  .thumb-wrapper .thumb-list .hexTop {
     top: -56.5685px; }
-  .thumb-list .hexTop:after {
+  .thumb-wrapper .thumb-list .hexTop:after {
     background-position: center top; }
-  .thumb-list .hexBottom {
+  .thumb-wrapper .thumb-list .hexBottom {
     bottom: -56.5685px; }
-  .thumb-list .hexBottom:after {
+  .thumb-wrapper .thumb-list .hexBottom:after {
     background-position: center bottom; }
-  .thumb-list .hexagon:after {
+  .thumb-wrapper .thumb-list .hexagon:after {
     content: "";
     position: absolute;
     top: 0.0000px;
@@ -698,10 +698,25 @@ footer {
           margin-right: 10px; }
 
 .popular-words {
-  margin: 30px auto; }
-  .popular-words a {
-    display: inline-block;
-    margin-right: 20px; }
+  width: 100%;
+  height: auto;
+  margin: 10px auto 60px auto;
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+  .popular-words h2 {
+    text-align: center; }
+  .popular-words .popular-words-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    .popular-words .popular-words-container a {
+      margin: 10px;
+      text-transform: capitalize; }
+      .popular-words .popular-words-container a:hover {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .popular-words .search {
+    margin-top: 30px; }
+    .popular-words .search input {
+      margin: 10px; }
+    .popular-words .search .btn {
+      padding: 5px 8px; }
 
 .canvas-area {
   position: relative; }
