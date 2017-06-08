@@ -5,7 +5,9 @@ var gImagesPath = 'assets/img/';
 var gBottomTxt  = document.querySelector('#bottom-text');
 var gTopTxt     = document.querySelector('#text-top');
 
+
  var deviceWidth  = window.innerWidth;
+ //to be moved to gcanvas style
  var canvasWidth  = Math.min(600, deviceWidth - 20);
  var canvasHeight = Math.min(480, deviceWidth - 20);
 
@@ -21,7 +23,9 @@ gCanvasStyle = {
 
     { color: 'blue', fontSize: 30, align: 'center', fillStyle: 'white', 
     strokeStyle: 'black', shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 }
-  ]
+  ],
+  deviceWidth: 0,
+  canvasHeight: 0
 };
 
 
@@ -61,13 +65,20 @@ function setStyle() {
 //   gCtx.fillText(gBottomTxt, x, y);
 // }
 
+const SHOW   = 'show';
+const CANVAS = 'canvas;'
+const HIDE   = 'hide';
+
 function setCanvasImg( el, imgId ) {
   //hide thumb area
-  var thumbArea = document.querySelector('.thumb-wrapper');
-  thumbArea.classList.add('hidden');
+  // var thumbArea = document.querySelector('.thumb-wrapper');
+  // thumbArea.classList.add('hidden');
+  toggleDisplayCanvas( CANVAS, SHOW );
 //show canvas
-  var canvasWrapper = document.querySelector('.canvas-wrapper');
-  canvasWrapper.classList.remove('hidden');
+  // var canvasWrapper = document.querySelector('.canvas-wrapper');
+  // canvasWrapper.classList.remove('hidden');
+  
+
   //get selected img url
   var imgUrl = getImgUrl( imgId );
 //clear canvas

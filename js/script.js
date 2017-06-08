@@ -17,6 +17,17 @@ function init(){
   gCanvas.width  = canvasWidth;
   gCanvas.height = canvasHeight;
 
+  
+// When the image has loaded...
+gCanvasImg.onload = function () {
+  // Work out where to center it
+  var x = gCanvas.width / 2 - gCanvasImg.width / 2;
+  var y = gCanvas.height / 2 - gCanvasImg.height / 2;
+
+  // Draw it
+  gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
+};
+
   renderImgsList(gImgs, '.thumb-list');
   renderPopularWords();
   sliderTeam();
@@ -141,12 +152,17 @@ function makeDevImg(selector) {
     return hex;
 }
 
-function closeElement( el ){
+function toggleDisplayCanvas( el, action ){
   var thumbArea  = document.querySelector('.thumb-wrapper');
   var canvasArea = document.querySelector('.canvas-wrapper');
-  if(el === 'canvas'){
+  if( el === CANVAS ){
+      if( action === SHOW ){
+        canvasArea.classList.remove('hidden');
+        thumbArea.classList.add('hidden');
+      } else {
+        canvasArea.classList.add('hidden');
+        thumbArea.classList.remove('hidden');
+      }
     
-    canvasArea.classList.add('hidden');
-    thumbArea.classList.remove('hidden');
   }
 }

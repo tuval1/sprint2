@@ -11,14 +11,23 @@
     }
     .tools-editor {
         // float: right;
-        margin:50px 0 0 0;
+        margin:auto;
     }
     .style-icons {
         padding: 5px;
         background: lightgray;
         margin:0 0 3px 5px;
     }
-    .shadow-tools {
+    .shadow-tools, .text-input-area {
         clear: both;
+        margin: 5px;
+        border: 1px solid darkgray;
+        padding: 5px;
+        text-align: center
     }
+}
+.canvas-wrapper {
+    border:1px solid;
+    box-shadow: 0 0 5px gray;
+    padding: 5px;
 }

@@ -10,5 +10,9 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.absolute {
+  position: absolute;
 }

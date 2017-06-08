@@ -412,7 +412,10 @@ template {
   width: 100%; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
+
+.absolute {
+  position: absolute; }
 
 /*----------  Playfair Font  ----------*/
 @font-face {
@@ -727,10 +730,19 @@ footer {
     right: 0;
     cursor: pointer; }
   .canvas-area .tools-editor {
-    margin: 50px 0 0 0; }
+    margin: auto; }
   .canvas-area .style-icons {
     padding: 5px;
     background: lightgray;
     margin: 0 0 3px 5px; }
-  .canvas-area .shadow-tools {
-    clear: both; }
+  .canvas-area .shadow-tools, .canvas-area .text-input-area {
+    clear: both;
+    margin: 5px;
+    border: 1px solid darkgray;
+    padding: 5px;
+    text-align: center; }
+
+.canvas-wrapper {
+  border: 1px solid;
+  box-shadow: 0 0 5px gray;
+  padding: 5px; }
