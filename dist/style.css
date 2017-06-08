@@ -458,7 +458,7 @@ template {
   padding: 0 1em; }
 
 .inner-container {
-  width: var(--inner-container-width);
+  max-width: var(--inner-container-width);
   margin: 0 auto; }
 
 /*----------  Flex Helpers  ----------*/
@@ -476,6 +476,9 @@ template {
 
 .space-between {
   justify-content: space-between; }
+
+.space-around {
+  justify-content: space-around; }
 
 .flex-wrap {
   flex-wrap: wrap; }
@@ -536,9 +539,8 @@ fieldset {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
     background-color: #bab1ba; }
 
-.myButton:active {
-  position: relative;
-  top: 1px; }
+input[type="text"] {
+  padding: 6px; }
 
 /* Components */
 header {
@@ -549,7 +551,6 @@ header {
   position: relative;
   margin-bottom: 50px; }
   header nav {
-    width: 40%;
     height: 60px;
     margin: 0 auto;
     font-size: 12px; }
@@ -575,10 +576,10 @@ header {
     position: relative;
     width: 160px;
     height: 92.38px;
-    margin: 30.19px 9px;
     background-image: url(http://csshexagon.com/img/meow.jpg);
     background-size: auto 184.7521px;
-    background-position: center; }
+    background-position: center;
+    cursor: pointer; }
   .thumb-wrapper .thumb-list .hexTop,
   .thumb-wrapper .thumb-list .hexBottom {
     position: absolute;
@@ -699,7 +700,6 @@ footer {
     border-bottom: 1px solid #2b2b2b;
     border-top: 1px solid #2b2b2b; }
     footer .cont .inner-container {
-      width: 820px;
       padding: 0 20px; }
       footer .cont .inner-container h4 {
         margin: 0;
@@ -713,29 +713,26 @@ footer {
         padding: 0;
         font-family: var(--secondary-font), sans-serif;
         font-size: 18px; }
-      footer .cont .inner-container .content .footer-form {
-        width: 60%; }
-        footer .cont .inner-container .content .footer-form form input, footer .cont .inner-container .content .footer-form form textarea {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: none;
-          box-sizing: border-box;
-          background-color: #454545;
+      footer .cont .inner-container .content .footer-form form input, footer .cont .inner-container .content .footer-form form textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: none;
+        box-sizing: border-box;
+        background-color: #454545;
+        color: #bebebe; }
+        footer .cont .inner-container .content .footer-form form input::placeholder, footer .cont .inner-container .content .footer-form form textarea::placeholder {
+          font-family: var(--primary-font);
+          font-size: 16px;
           color: #bebebe; }
-          footer .cont .inner-container .content .footer-form form input::placeholder, footer .cont .inner-container .content .footer-form form textarea::placeholder {
-            font-family: var(--primary-font);
-            font-size: 16px;
-            color: #bebebe; }
-        footer .cont .inner-container .content .footer-form form .btn {
-          width: 90px;
-          line-height: 20px;
-          background-color: #2eb398;
-          box-sizing: border-box;
-          padding: 8px 0; }
+      footer .cont .inner-container .content .footer-form form .btn-footer {
+        width: 90px;
+        line-height: 20px;
+        background-color: #2eb398;
+        box-sizing: border-box;
+        padding: 8px 0; }
       footer .cont .inner-container .content .footer-content {
-        width: 35%;
         text-align: justify;
         color: #e0e0e0; }
         footer .cont .inner-container .content .footer-content p {
@@ -744,7 +741,8 @@ footer {
         footer .cont .inner-container .content .footer-content div {
           margin-bottom: 5px; }
         footer .cont .inner-container .content .footer-content i {
-          margin-right: 10px; }
+          margin-right: 10px;
+          color: #2eb398; }
 
 .popular-words {
   width: 100%;
@@ -768,7 +766,8 @@ footer {
       padding: 5px 8px; }
 
 .canvas-area {
-  position: relative; }
+  position: relative;
+  padding: 20px; }
   .canvas-area .close {
     position: absolute;
     top: 0;
@@ -780,6 +779,8 @@ footer {
     padding: 5px;
     background: lightgray;
     margin: 0 0 3px 5px; }
+    .canvas-area .style-icons button {
+      padding: 8px 10px; }
   .canvas-area .shadow-tools, .canvas-area .text-input-area {
     clear: both;
     margin: 5px;
@@ -789,5 +790,31 @@ footer {
 
 #canvas-wrapper {
   border: 1px solid;
-  box-shadow: 0 0 5px gray;
-  padding: 5px; }
+  box-shadow: 0 0 5px gray; }
+
+@media (max-width: 1100px) {
+  .popular-words {
+    justify-content: center; } }
+
+@media (min-width: 1100px) {
+  .popular-words {
+    justify-content: space-between; } }
+
+@media (max-width: 768px) {
+  .footer-form {
+    width: 100%; }
+  .footer-content {
+    width: 100%; }
+  .hexagon {
+    margin: 50.19px 9px; } }
+
+@media (min-width: 768px) {
+  .footer-form {
+    width: 60%; }
+  header nav {
+    width: 40%; }
+  .footer-content {
+    margin: 74px 0 0 10px;
+    width: 35%; }
+  .hexagon {
+    margin: 30.19px 9px; } }

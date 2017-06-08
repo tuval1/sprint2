@@ -13,7 +13,7 @@
 
 <body onload="init()">
 <header>
-    <nav class="clean-list flex justify-center space-between align-center">
+    <nav class="clean-list flex justify-center space-around align-center">
         <a href="">home</a>
         <a href="">About us</a>
         <div class="square"><img class="square-img" src="assets/img/logo.png" alt=""></div>
@@ -23,7 +23,7 @@
     <div class="header-triangle"></div>
 </header>
 <div class="container">
-    <div class="popular-words flex justify-center  space-between align-center ">
+    <div class="popular-words flex align-center flex-wrap">
         <div class="search">
             Search image:
             <label for="search"><input id="search" type="text" placeholder=""></label>
@@ -174,10 +174,11 @@
 <footer>
     <div class="cont">
         <div class="inner-container">
-            <h4>Get In Touch</h4>
-            <p>In order to get in touch use the contact form below:</p>
-            <div class="content flex justify-center space-between">
+           
+            <div class="content flex flex-wrap justify-center space-between">
                 <div class="footer-form">
+                     <h4>Get In Touch</h4>
+            <p>In order to get in touch use the contact form below:</p>
                     <form class="" action="">
                         <label for="name">
                             <input type="text" id="name" placeholder="Name(Required)">
@@ -192,7 +193,7 @@
                     <textarea name="text" id="text" placeholder="Write your message here..." cols="30" rows="7">
                     </textarea>
                         </label>
-                        <input class="btn" type="submit" value="send">
+                        <input class="btn-footer" type="submit" value="send">
                     </form>
                 </div>
                 <div class="footer-content">

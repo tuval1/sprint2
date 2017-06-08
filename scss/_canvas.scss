@@ -1,5 +1,6 @@
 .canvas-area {
     position: relative;
+    padding: 20px;
     .close {
         position: absolute;
         top:0;
@@ -17,6 +18,10 @@
         padding: 5px;
         background: lightgray;
         margin:0 0 3px 5px;
+        button{
+            padding:8px 10px;
+        }
+        
     }
     .shadow-tools, .text-input-area {
         clear: both;
@@ -29,5 +34,5 @@
 #canvas-wrapper {
     border:1px solid;
     box-shadow: 0 0 5px gray;
-    padding: 5px;
+    // padding: 5px;
 }

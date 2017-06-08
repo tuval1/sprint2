@@ -11,7 +11,7 @@ footer {
 
     .inner-container {
 
-      width: 820px;
+      // width: 820px;
       padding: 0 20px;
 
       h4 {
@@ -34,7 +34,7 @@ footer {
 
         .footer-form {
 
-          width: 60%;
+          // width: 60%;
 
           form {
 
@@ -55,7 +55,7 @@ footer {
               }
             }
 
-            .btn {
+            .btn-footer {
               width: 90px;
               line-height: 20px;
               background-color: #2eb398;
@@ -67,7 +67,7 @@ footer {
         }
 
         .footer-content {
-          width: 35%;
+          // width: 35%;
           text-align: justify;
           color: #e0e0e0;
 
@@ -82,6 +82,7 @@ footer {
 
           i {
             margin-right: 10px;
+            color:#2eb398;
           }
         }
       }
