@@ -34,10 +34,6 @@ function createHex(img) {
     return hex;
 }
 
-function startGenImg(el, idx) {
-    console.log('Start gen', idx);
-}
-
 function searchPopularWords() {
 
     return gImgs.reduce(function (res, img) {
@@ -67,7 +63,7 @@ function renderPopularWords() {
 
 function renderImgsByWord(event) {
     event.preventDefault();
-    var targetWord = this.innerText;
+    var targetWord = this.innerText.toLowerCase();
 
     var imgs = gImgs.filter(function (img) {
             return (img.keyword.includes(targetWord));
@@ -82,6 +78,37 @@ function clearThumbList() {
     el.innerText = '';
 }
 
+function getSearchUserWord(event) {
+    event.preventDefault();
+    var elSearch = document.querySelector('#search');
+    var targetWord = elSearch.value.toLowerCase();
+
+    var imgs = gImgs.filter(function (img) {
+        return (img.keyword.includes(targetWord));
+    });
+
+    clearThumbList();
+    renderImgsList(imgs);
+}
+
+function sliderTeam() {
+    var elSlideLeft = document.querySelector('.btn-left');
+    var elSlideRight = document.querySelector('.btn-right');
+    var elTeamContent1 = document.querySelector('.team-content1');
+    var elTeamContent2 = document.querySelector('.team-content2');
+
+    elSlideLeft.addEventListener('click', moveLeft);
+    function moveLeft(){
+        elSlideLeft.style.display = 'block';
+        total_img[idx].style.display = 'none'; // Скрываем текущий слайд
+        total_img[++idx].style.display = 'block'; // Инкрементируем индекс и показываем следующий слайд
+        if (idx === total_img.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
+            slide_right.style.display = 'none';
+        }
+    }
+
+}
+
 
 renderImgsList(gImgs, '.thumb-list');
-renderPopularWords('.thumb-list');
+renderPopularWords();

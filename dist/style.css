@@ -709,6 +709,8 @@ footer {
     .popular-words .popular-words-container a {
       margin: 10px;
       text-transform: capitalize; }
+      .popular-words .popular-words-container a:hover {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
   .popular-words .search {
     margin-top: 30px; }
     .popular-words .search input {
