@@ -42,8 +42,9 @@
 
     <!--canvas area-->
     <div class="canvas-wrapper hidden">
+        
 <div class="canvas-area flex justify-center flex-wrap">
-    <div class="close" onclick="closeElement('canvas')"><i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
+    <div class="close" onclick="toggleDisplayCanvas( CANVAS, HIDE )"><i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
     </div>
 
     <!--set default image on the canvas-->
@@ -57,6 +58,7 @@
     <div class="tools-editor">
         
          <!--top text tool editor-->
+         <!--need to be rendered by loop-->
         <div class="style-icons">
             <button onclick="alignText('top','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
             <button onclick="alignText('top','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
@@ -68,14 +70,14 @@
             <input type="color" class="stroke-color-top" onclick="changeTxtColor('top','stroke')"></button>
             
              <div class="shadow-tools">
-                 <span>Shadow</span>
+                 <span>Shadow </span>
                 <input type="color" class="top-shadow-color">
                 <input type="text" size="2" class="top-shadow-offset-x">
                 <input type="text" size="2" class="top-shadow-offset-y">
                 <button onclick="addShadow( 'top' )">Add</button>
             </div>
 
-            <div><span>Text</span>
+            <div class="text-input-area"><span>Text</span>
             <input id="text-top" type="text" placeholder="enter some text" value=""/><br>            
             </div>
 
@@ -94,13 +96,14 @@
             
             
              <div class="shadow-tools">
+                 <span>Shadow </span>
                 <input type="color" class="bottom-shadow-color">
                 <input type="text" size="2" class="bottom-shadow-offset-x">
                 <input type="text" size="2" class="bottom-shadow-offset-y">
                 <button onclick="addShadow( 'bottom' )">Add</button>
             </div>
             
-            <div>
+            <div class="text-input-area">
             <input id="bottom-text" type="text" placeholder="enter some text" value="" /><br>
             <button onclick="draw()">Send</button><button onclick="saveImg()">Save</button>
             
@@ -110,7 +113,7 @@
     </div>
     <!--end tool editor-->    
 </div>
-<a href="#">Back</a>
+
 </div>
 <!--end canvas area-->
 
