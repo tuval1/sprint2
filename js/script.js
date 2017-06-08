@@ -11,9 +11,9 @@ var gImgs = [
     {id: 7, url: 'assets/img/7.jpg', keyword: ['animal','funny', 'sarcasm']}
 ];
 
-function renderImgList() {
+function renderImgsList(imgs) {
     var el = document.querySelector('.thumb-list');
-    gImgs.forEach(function (img) {
+    imgs.forEach(function (img) {
         el.append(createHex(img))
     });
 }
@@ -42,13 +42,7 @@ function searchPopularWords() {
 
     return gImgs.reduce(function (res, img) {
         (img.keyword).forEach(function (word) {
-            var isFounded = false;
-            for (var item in res) {
-                if (word === item) {
-                    isFounded = true;
-                }
-            }
-            isFounded ? res[word]++ : res[word] = 1;
+            (Object.keys(res)).includes(word) ? res[word]++ : res[word] = 1;
         });
         return res;
     }, {});
@@ -64,29 +58,28 @@ function renderPopularWords() {
         link.href = "#";
         link.innerText = word;
         link.title = word;
-        link.style.fontSize = words[word] + 20 + 'px';
-        link.setAttribute('onclick', word);
+        link.style.fontSize = words[word]*10 + 'px';
+        link.addEventListener('click', renderImgsByWord);
         el.append(link);
     }
 }
 
-$(document).ready(function () {
-    $('.btn-left').click(function (e) {
-        e.preventDefault();
-        $('.team-content2').slideToggle(1000);
-        $('.team-content1').slideToggle(1000);
+function renderImgsByWord(event) {
+    event.preventDefault();
+    var targetWord = this.innerText;
+
+    var imgs = gImgs.filter(function (img) {
+            return (img.keyword.includes(targetWord));
     });
 
-    $('.btn-right').click(function (e) {
-        e.preventDefault();
-        $('.team-content2').slideToggle(1000);
-        $('.team-content1').slideToggle(1000);
-    });
-});
+    clearThumbList();
+    renderImgsList(imgs);
+}
 
+function clearThumbList() {
+    var el = document.querySelector('.thumb-list');
+    el.innerText = '';
+}
 
-// var el = document.querySelector('#hex');
-// var div = createHex(gImgs[0]);
-// el.append(div);
-renderImgList();
-renderPopularWords();
+renderImgsList(gImgs, '.thumb-list');
+renderPopularWords('.thumb-list');
