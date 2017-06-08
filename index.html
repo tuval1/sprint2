@@ -7,7 +7,8 @@
     <title>Coding Academy</title>
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/canvas.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <!--<link rel="stylesheet" href="dist/canvas.css">-->
 </head>
 
 <body onload="init()">
@@ -35,13 +36,13 @@
     </div>
     <!--thumb list-->
     <div class="thumb-wrapper flex flex-wrap justify-center">
-        <div class="thumb-list flex flex-wrap justify-center space-between">
+        <div class="thumb-list flex flex-wrap justify-center ">
         </div>
     </div>
     <!--thumb list end-->
 
     <!--canvas area-->
-    <div class="canvas-wrapper hidden">
+    <div class=" hidden" id="canvas-wrapper">
         
 <div class="canvas-area flex justify-center flex-wrap">
     <div class="close" onclick="toggleDisplayCanvas( CANVAS, HIDE )"><i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
@@ -74,7 +75,7 @@
                 <input type="color" class="top-shadow-color">
                 <input type="text" size="2" class="top-shadow-offset-x">
                 <input type="text" size="2" class="top-shadow-offset-y">
-                <button onclick="addShadow( 'top' )">Add</button>
+                <button onclick="addShadow( 'top' )" class="btn">Add</button>
             </div>
 
             <div class="text-input-area"><span>Text</span>
@@ -100,12 +101,12 @@
                 <input type="color" class="bottom-shadow-color">
                 <input type="text" size="2" class="bottom-shadow-offset-x">
                 <input type="text" size="2" class="bottom-shadow-offset-y">
-                <button onclick="addShadow( 'bottom' )">Add</button>
+                <button onclick="addShadow( 'bottom' )" class="btn">Add</button>
             </div>
             
             <div class="text-input-area">
             <input id="bottom-text" type="text" placeholder="enter some text" value="" /><br>
-            <button onclick="draw()">Send</button><button onclick="saveImg()">Save</button>
+            <button onclick="draw()" class="btn">Send</button><button onclick="saveImg()" class="btn">Save</button>
             
             </div>
             

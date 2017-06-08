@@ -1,10 +1,24 @@
-var gCanvas     = document.querySelector('#my-canvas');
-var gCtx        = gCanvas.getContext("2d");
-var gCanvasImg  = document.querySelector('.start-image');
+var gCanvas;
+var gCtx;
+var gCanvasImg;
 var gImagesPath = 'assets/img/';
-var gBottomTxt  = document.querySelector('#bottom-text');
-var gTopTxt     = document.querySelector('#text-top');
+var gBottomTxt;
+var gTopTxt;
 
+
+const SHOW   = 'show';
+const CANVAS = 'canvas;'
+const HIDE   = 'hide';
+
+function initCanvasSelectors(){
+  gCanvas     = document.querySelector('#my-canvas');
+  gCtx        = gCanvas.getContext("2d");
+  gCanvasImg  = document.querySelector('.start-image');
+  gImagesPath = 'assets/img/';
+  gBottomTxt  = document.querySelector('#bottom-text');
+  gTopTxt     = document.querySelector('#text-top');
+
+}
 
  var deviceWidth  = window.innerWidth;
  //to be moved to gcanvas style
@@ -31,6 +45,7 @@ gCanvasStyle = {
 
 
 //change text inside the canvas on live
+function addCanvasTxtListener(){
   gBottomTxt.addEventListener('keydown', draw);
   gBottomTxt.addEventListener('keyup', draw);
   gBottomTxt.addEventListener('change', draw);
@@ -38,16 +53,9 @@ gCanvasStyle = {
   gTopTxt.addEventListener('keydown', draw);
   gTopTxt.addEventListener('keyup', draw);
   gTopTxt.addEventListener('change', draw);
+}
+  
 
-// When the image has loaded...
-gCanvasImg.onload = function () {
-  // Work out where to center it
-  var x = gCanvas.width / 2 - gCanvasImg.width / 2;
-  var y = gCanvas.height / 2 - gCanvasImg.height / 2;
-
-  // Draw it
-  gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
-};
 
 function setStyle() {
   gCtx.lineWidth   = gCanvasStyle.lineWidth;
@@ -65,19 +73,10 @@ function setStyle() {
 //   gCtx.fillText(gBottomTxt, x, y);
 // }
 
-const SHOW   = 'show';
-const CANVAS = 'canvas;'
-const HIDE   = 'hide';
 
 function setCanvasImg( el, imgId ) {
-  //hide thumb area
-  // var thumbArea = document.querySelector('.thumb-wrapper');
-  // thumbArea.classList.add('hidden');
-  toggleDisplayCanvas( CANVAS, SHOW );
-//show canvas
-  // var canvasWrapper = document.querySelector('.canvas-wrapper');
-  // canvasWrapper.classList.remove('hidden');
   
+  toggleDisplayCanvas( CANVAS, SHOW );  
 
   //get selected img url
   var imgUrl = getImgUrl( imgId );
