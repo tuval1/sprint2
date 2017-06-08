@@ -591,7 +591,8 @@ header {
   .team .collapsed {
     height: 0; }
   .team .team-content1, .team .team-content2 {
-    width: 820px; }
+    max-width: 820px;
+    transition: display 5s ease; }
     .team .team-content1 .team-hex, .team .team-content2 .team-hex {
       border-left: 1px solid #219d84;
       padding: 10px 0 10px 20px; }

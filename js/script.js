@@ -2,8 +2,8 @@
 
 
 var gImgs = [
-    {id: 1, url: 'assets/img/1.jpg', keyword: ['sad','dog']},
-    {id: 2, url: 'assets/img/2.jpg', keyword: ['animal','sad']},
+    {id: 1, url: 'assets/img/1.jpg', keyword: ['baby','telephone']},
+    {id: 2, url: 'assets/img/2.jpg', keyword: ['animal','penguin']},
     {id: 3, url: 'assets/img/3.jpg', keyword: ['animal', 'cat']},
     {id: 4, url: 'assets/img/4.jpg', keyword: ['girl']},
     {id: 5, url: 'assets/img/5.jpg', keyword: ['animal', 'dog']},
@@ -19,6 +19,7 @@ function init(){
 
   renderImgsList(gImgs, '.thumb-list');
   renderPopularWords();
+  sliderTeam();
 }
 
 function renderImgsList(imgs) {
@@ -39,12 +40,9 @@ function createHex(img) {
     hex.append(hex2);
     hex.append(hex3);
     hex.style.backgroundImage = `url(${img.url})`;
-
     hex.setAttribute('onclick', 'setCanvasImg(this,' + img.id + ')');
     return hex;
 }
-
-
 
 function searchPopularWords() {
 
@@ -110,20 +108,38 @@ function sliderTeam() {
     var elTeamContent2 = document.querySelector('.team-content2');
 
     elSlideLeft.addEventListener('click', moveLeft);
-    function moveLeft(){
-        elSlideLeft.style.display = 'block';
-        total_img[idx].style.display = 'none'; // Скрываем текущий слайд
-        total_img[++idx].style.display = 'block'; // Инкрементируем индекс и показываем следующий слайд
-        if (idx === total_img.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
-            slide_right.style.display = 'none';
-        }
+    elSlideRight.addEventListener('click', moveRight);
+
+    function moveLeft(event){
+        event.preventDefault();
+        elTeamContent1.style.display = 'none';
+        elTeamContent2.style.display = 'flex';
     }
 
+    function moveRight(event){
+        event.preventDefault();
+        // elTeamContent1.style.transform.rotate = -1;
+        elTeamContent1.style.display = 'flex';
+        elTeamContent2.style.display = 'none';
+    }
 }
 
+function makeDevImg(selector) {
+    var elDev = document.querySelector(selector);
+    // var elDev2 = document.querySelector('.team-content2 > .team-hex');
 
-
-
+    var hex = document.createElement('div');
+    hex.classList.add('hexagon');
+    var hex2 = document.createElement('div');
+    hex2.classList.add('hexTop');
+    var hex3 = document.createElement('div');
+    hex3.classList.add('hexBottom');
+    hex.append(hex2);
+    hex.append(hex3);
+    hex.style.backgroundImage = url('ass');
+    hex.setAttribute('onclick', 'setCanvasImg(this,' + img.id + ')');
+    return hex;
+}
 
 function closeElement( el ){
   var thumbArea  = document.querySelector('.thumb-wrapper');

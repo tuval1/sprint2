@@ -27,7 +27,8 @@
 
 
   .team-content1,.team-content2  {
-    width: 820px;
+    max-width: 820px;
+    transition: display 5s ease;
 
     .team-hex {
       border-left: 1px solid #219d84;
