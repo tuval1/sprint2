@@ -56,36 +56,57 @@
     
     <div class="tools-editor">
         
-        <div class="style-icons flex">
-            <button onclick="alignText('bottom','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
-            <button onclick="alignText('bottom','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
-            <button onclick="alignText('bottom','right')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
-            <button onclick="increaseFont('bottom')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
-            <button onclick="decreaseFont('bottom')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
-            <button onclick="clearInput();"><i class="fa fa-trash" aria-hidden="true" ></i></button>
-            <input type="color" id="text-color" onclick="changeStyle('bottom','tColor')"></button>
-            <input type="color" id="stroke-color" onclick="changeStyle('bottom','stkColor')">    </button>
-            <div>
-            <input id="bottom-text" type="text" placeholder="enter some text"/><br>
-            <button onclick="draw()">Send</button><button onclick="download()">download</button>
-            </div>
-        </div>
-
-        <!--top text tool editor-->
-        <div class="style-icons flex">
+         <!--top text tool editor-->
+        <div class="style-icons">
             <button onclick="alignText('top','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
             <button onclick="alignText('top','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
             <button onclick="alignText('top','right')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
-            <button onclick="increaseFont('top')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
-            <button onclick="decreaseFont('top')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
-            <button onclick="clearInput();"><i class="fa fa-trash" aria-hidden="true" ></i></button>
-            <input type="color" id="text-color" onclick="changeStyle('top','tColor')"></button>
-            <input type="color" id="stroke-color" onclick="changeStyle('top','stkColor')">    </button>
+            <button onclick="changeFontSize('top','increase')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+            <button onclick="changeFontSize('top','decrease')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
+            <button onclick="clearInput('top');"><i class="fa fa-trash" aria-hidden="true" ></i></button>
+            <input type="color" class="fill-color-top" onclick="changeTxtColor('top','fill')"></button>
+            <input type="color" class="stroke-color-top" onclick="changeTxtColor('top','stroke')"></button>
+            
+             <div class="shadow-tools">
+                <input type="color" class="top-shadow-color">
+                <input type="text" size="2" class="top-shadow-offset-x">
+                <input type="text" size="2" class="top-shadow-offset-y">
+                <button onclick="addShadow( 'top' )">Add</button>
+            </div>
+
             <div>
-            <input id="text-top" type="text" placeholder="enter some text"/><br>
-            <button onclick="draw()">Send</button><button onclick="download()">download</button>
+            <input id="text-top" type="text" placeholder="enter some text" value=""/><br>            
+            </div>
+
+           
+        </div>
+
+        <div class="style-icons ">
+            <button onclick="alignText('bottom','left')"><i class="fa fa-align-left" aria-hidden="true" ></i></button>
+            <button onclick="alignText('bottom','center')"><i class="fa fa-align-center" aria-hidden="true" ></i></button>
+            <button onclick="alignText('bottom','right')"><i class="fa fa-align-right" aria-hidden="true" ></i></button>
+            <button onclick="changeFontSize('bottom','increase')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+            <button onclick="changeFontSize('bottom','decrease')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
+            <button onclick="clearInput('bottom');"><i class="fa fa-trash" aria-hidden="true" ></i></button>
+            <input type="color" class="fill-color-bottom" onclick="changeTxtColor('bottom','fill')"></button>
+            <input type="color" class="stroke-color-bottom" onclick="changeTxtColor('bottom','stroke')">    </button>
+            
+            
+             <div class="shadow-tools">
+                <input type="color" class="bottom-shadow-color">
+                <input type="text" size="2" class="bottom-shadow-offset-x">
+                <input type="text" size="2" class="bottom-shadow-offset-y">
+                <button onclick="addShadow( 'bottom' )">Add</button>
+            </div>
+            
+            <div>
+            <input id="bottom-text" type="text" placeholder="enter some text" value="" /><br>
+            <button onclick="draw()">Send</button><button onclick="saveImg()">Save</button>
+            
             </div>
         </div>
+
+       
 
         
     </div>

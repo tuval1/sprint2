@@ -1,9 +1,9 @@
-var gCanvas = document.querySelector('#my-canvas');
-var gCtx    = gCanvas.getContext("2d");
-var gCanvasImg    = document.querySelector('.start-image');
+var gCanvas     = document.querySelector('#my-canvas');
+var gCtx        = gCanvas.getContext("2d");
+var gCanvasImg  = document.querySelector('.start-image');
 var gImagesPath = 'assets/img/';
-var gBottomTxt = document.querySelector('#bottom-text');
-var gBottomTxt = document.querySelector('#text-top');
+var gBottomTxt  = document.querySelector('#bottom-text');
+var gTopTxt     = document.querySelector('#text-top');
 
  var deviceWidth  = window.innerWidth;
  var canvasWidth  = Math.min(600, deviceWidth - 20);
@@ -11,17 +11,16 @@ var gBottomTxt = document.querySelector('#text-top');
 
 gCanvasStyle = {
   lineWidth: 5,
-  fontSize: 30,
   fontFamily: ' arial',
-  strokeStyle: 'blue',
-  fillStyle: 'yellow',
-  textAlign: 'center',
   lineJoin: 'round',
   txtXpos: canvasWidth / 2,
   txtYpos: canvasHeight - (canvasHeight / 4.5),
   txts: [
-    { color: 'red', fontSize: 30, align: 'center' },
-    { color: 'blue', fontSize: 30, align: 'center' }
+    { color: 'red', fontSize: 30, align: 'center', fillStyle: 'white', 
+    strokeStyle: 'black',shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 },
+
+    { color: 'blue', fontSize: 30, align: 'center', fillStyle: 'white', 
+    strokeStyle: 'black', shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 }
   ]
 };
 
@@ -38,6 +37,10 @@ function init(){
   gBottomTxt.addEventListener('keyup', draw);
   gBottomTxt.addEventListener('change', draw);
 
+  gTopTxt.addEventListener('keydown', draw);
+  gTopTxt.addEventListener('keyup', draw);
+  gTopTxt.addEventListener('change', draw);
+
 // When the image has loaded...
 gCanvasImg.onload = function () {
   // Work out where to center it
@@ -51,9 +54,6 @@ gCanvasImg.onload = function () {
 function setStyle() {
   gCtx.lineWidth   = gCanvasStyle.lineWidth;
   gCtx.font        = gCanvasStyle.fontSize + 'pt' + gCanvasStyle.fontFamily;
-  // gCtx.strokeStyle = gCanvasStyle.strokeStyle;
-  // gCtx.fillStyle   = gCanvasStyle.fillStyle;
-  // gCtx.textAlign   = gCanvasStyle.textAlign;
   gCtx.lineJoin    = gCanvasStyle.lineJoin;
 
 }
@@ -68,23 +68,25 @@ function setStyle() {
 // }
 
 function setCanvasImg( el, imgId ) {
+  //hide thumb area
   var thumbArea = document.querySelector('.thumb-wrapper');
   thumbArea.classList.add('hidden');
-
+//show canvas
   var canvasWrapper = document.querySelector('.canvas-wrapper');
   canvasWrapper.classList.remove('hidden');
+  //get selected img url
   var imgUrl = getImgUrl( imgId );
-
+//clear canvas
   gCtx.clearRect(0, 0, canvasWidth, canvasHeight);
-  // imgSrc = gImagesPath + el.getAttribute('data-img');
+  // set selected img to the canvas
   imgSrc = imgUrl;
   gCanvasImg.src = imgSrc;
   gCanvasImg.onload = function () {
-    gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
+  gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
   }
 }
 
-function download(){
+function saveImg(){
   var link = gCanvas.toDataURL();
   window.location = link;
 }
@@ -98,7 +100,7 @@ function download(){
 
   }  
 
-
+//text renderer
 function wrapText(text, x, y, maxWidth, lineHeight, fromBottom) { 
 
   var pushMethod = (fromBottom) ? 'unshift' : 'push';
@@ -131,112 +133,110 @@ function wrapText(text, x, y, maxWidth, lineHeight, fromBottom) {
 
 
 }
+function updateStyle( p ){
+  gCtx.textAlign   = gCanvasStyle.txts[p].align;
+  gCtx.font        = gCanvasStyle.txts[p].fontSize + 'pt' + gCanvasStyle.fontFamily;
+  gCtx.strokeStyle = gCanvasStyle.txts[p].strokeStyle;
+  gCtx.fillStyle   = gCanvasStyle.txts[p].fillStyle;
+  //if shadow is applyed
+  if( gCanvasStyle.txts[p].shadowOffsetX && gCanvasStyle.txts[p].shadowOffsetY){
+    gCtx.shadowColor = gCanvasStyle.txts[p].shadowColor;
+    gCtx.shadowOffsetX = gCanvasStyle.txts[p].shadowOffsetX;
+    gCtx.shadowOffsetY = gCanvasStyle.txts[p].shadowOffsetY;
+  }
+  
+}
 
 function draw() {
   //clear the canvas, need to change the nums to 
   gCtx.clearRect(0, 0, canvasWidth, canvasHeight);
   setStyle();
   gCtx.drawImage(gCanvasImg, 0, 0, canvasWidth, canvasHeight);
-  //draw bottom text
-  gCtx.strokeStyle = 'red';
-  gCtx.fillStyle   = 'black';
-  var p = 1;
-  gCtx.textAlign   = gCanvasStyle.txts[p].align;
-  gCtx.font        = gCanvasStyle.txts[p].fontSize + 'pt' + gCanvasStyle.fontFamily;
-  var x = gCanvasStyle.txtXpos;
-  var y = gCanvasStyle.txtYpos;
+  //draw bottom text  
+  var p = 1;//select the bottom text object
+  updateStyle( p );
+//set txt position
+  var x          = gCanvasStyle.txtXpos;
+  var y          = gCanvasStyle.txtYpos;
   var textBottom = gBottomTxt.value;
   text = textBottom.toUpperCase();
+  //render the txt on the canvas
   wrapText(textBottom, x, y, canvasWidth, 28, true);
 
   //draw top text
-  var p = 0;
-  gCtx.strokeStyle = 'orange';
-  gCtx.fillStyle   = 'blue';
-  gCtx.textAlign   = gCanvasStyle.txts[p].align;
-  gCtx.font        = gCanvasStyle.txts[p].fontSize + 'pt' + gCanvasStyle.fontFamily;
+  var p = 0;//select the top text object
+  updateStyle( p );
+  //set the top txt position
   y = 60;
-  var textTop = document.querySelector('#text-top').value;
+  var textTop = gTopTxt.value;
   wrapText(textTop, x, y, canvasWidth, 28, false);
   
 
 }
-
+function getTxtPosition( pos ){
+  if( pos === 'top' ){
+    var p = 0;//select the top text
+  } else {
+    p = 1;//select the bottom text
+  }
+  return p;
+}
 
 function alignText( pos ,direction ) {
-  if(pos === 'top'){
-    var p = 0;
-  } else {
-    p =1;
-  }
+  var p = getTxtPosition( pos );
   gCanvasStyle.txts[p].align = direction
   draw();
   
 }
-function increaseFont( pos ){
-  if (pos === 'top'){
-    var p = 0;
+
+function changeFontSize( pos, action ){
+  var p = getTxtPosition( pos );
+
+  if(action === 'increase') {
+    gCanvasStyle.txts[p].fontSize += 1;
   } else {
-    var p = 1;
+    gCanvasStyle.txts[p].fontSize -= 1;
   }
-  gCanvasStyle.txts[p].fontSize += 1;
+
+draw();
+}
+
+function changeTxtColor( pos, type ){
+  var p             = getTxtPosition( pos );
+  var colorSelector = type + '-color-' + pos;
+  var txtColor      = document.querySelector('.' + colorSelector);
+  if( type === 'fill')
+      gCanvasStyle.txts[p].fillStyle = txtColor.value;  
+      else 
+        gCanvasStyle.txts[p].strokeStyle = txtColor.value;        
+      draw();
+}
+
+function addShadow( pos ){
+  var p                     = getTxtPosition( pos );
+  //selectors
+  var shadowColorSelector   = '.' + pos + '-shadow-color';
+  var shadowOffsetXselector = '.' + pos + '-shadow-offset-x'
+  var shadowOffsetYselector = '.' + pos + '-shadow-offset-y';
   
+  var color   = document.querySelector(shadowColorSelector).value;
+  var offsetX = document.querySelector(shadowOffsetXselector).value;
+  var offsetY = document.querySelector(shadowOffsetYselector).value;
+
+  gCanvasStyle.txts[p].shadowColor = color;
+  gCanvasStyle.txts[p].shadowOffsetX = offsetX;
+  gCanvasStyle.txts[p].shadowOffsetY = offsetY;
   draw();
 }
 
-function decreaseFont(){
-  gCanvasStyle.fontSize -= 1;
+//clear text
+function clearInput( pos ){
+  var p = getTxtPosition( pos );
+  if( p === 1)
+  gBottomTxt.value = '';
+    else
+      gTopTxt.value = '';
   draw();
-}
-
-function changeTxtColor(){
-  var txtColor = document.querySelector('#text-color');
-      gCanvasStyle.fillStyle = txtColor.value;  
-}
-
-function changeStkColor(){
-  var stkColor = document.querySelector('#stroke-color');
-      gCanvasStyle.strokeStyle = stkColor.value;   
-}
-
-function changeStyle( el ) {
-  switch ( el ) {
-    // case 'LEFT':
-    //   alignText(LEFT);
-    //   break;
-
-    // case 'RIGHT':
-    //   alignText(RIGHT)
-    //   break;
-
-    // case 'CENTER':
-    //   alignText(CENTER);      
-    //   break;
-
-    // case 'tPlus':
-    //   increaseFont();
-    //   break;
-
-    // case 'tMinus':
-    //   decreaseFont();      
-    //   break;
-
-    case 'tColor':
-      changeTxtColor();
-      break;      
-
-    case 'stkColor':
-         changeStkColor();
-      break;
-
-    default:
-      break;      
-  }
-    draw();
-}
-
-function clearInput(){
-
 }
 //  bugs to fix
 // changing color does not work correctly
