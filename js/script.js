@@ -53,7 +53,7 @@ function renderImgsList(imgs) {
 function createHex(img) {
 
     var hex = document.createElement('div');
-    hex.classList.add('hexagon');
+    hex.classList.add('hexagon','animated','zoomIn');
     var hex2 = document.createElement('div');
     hex2.classList.add('hexTop');
     var hex3 = document.createElement('div');
@@ -79,7 +79,7 @@ function renderPopularWords() {
     var el = document.querySelector('.popular-words-container');
     var words = searchPopularWords();
     var strHtml ='';
-
+        
     for (var word in words) {
         var link = document.createElement('a');
         link.href = "#";
@@ -137,8 +137,7 @@ function sliderTeam() {
         elTeamContent2.style.display = 'flex';
         elSlideLeft.style.display = 'hidden';
         elSlideRight.style.display = 'block';
-        // elTeamContent1.style.display = (elTeamContent1.style.display === 'none') ? 'flex' : 'none';
-        // elTeamContent2.style.display = (elTeamContent2.style.display === 'none') ? 'flex' : 'none';
+    
     }
 
     function moveRight(event){
@@ -147,8 +146,7 @@ function sliderTeam() {
         elTeamContent2.style.display = 'none';
         elSlideRight.style.display = 'hidden';
         elSlideLeft.style.display = 'block';
-        // elTeamContent1.style.display = (elTeamContent1.style.display === 'none') ? 'flex' : 'none';
-        // elTeamContent2.style.display = (elTeamContent2.style.display === 'none') ? 'flex' : 'none';
+       
 
     }
 }

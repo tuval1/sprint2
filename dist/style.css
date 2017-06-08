@@ -806,7 +806,11 @@ footer {
   .footer-content {
     width: 100%; }
   .hexagon {
-    margin: 50.19px 9px; } }
+    margin: 50.19px 9px; }
+  .team-hex {
+    width: 100%; }
+  .team-about {
+    width: 100%; } }
 
 @media (min-width: 768px) {
   .footer-form {
@@ -817,4 +821,8 @@ footer {
     margin: 74px 0 0 10px;
     width: 35%; }
   .hexagon {
-    margin: 30.19px 9px; } }
+    margin: 30.19px 9px; }
+  .team-hex {
+    width: 35%; }
+  .team-about {
+    width: 60%; } }

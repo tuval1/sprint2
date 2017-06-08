@@ -39,7 +39,8 @@ gCanvasStyle = {
     strokeStyle: 'black', shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 }
   ],
   deviceWidth: 0,
-  canvasHeight: 0
+  canvasHeight: 0,
+  selectedElement: 0
 };
 
 

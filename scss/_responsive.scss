@@ -22,6 +22,12 @@
     .hexagon{
         margin: 50.19px 9px;
     }
+     .team-hex{
+        width: 100%;
+    }
+    .team-about {
+        width:100%
+    }
 }
 @media (min-width:768px){
      .footer-form{
@@ -36,5 +42,11 @@
     }    
     .hexagon{
         margin: 30.19px 9px;
+    }
+    .team-hex{
+        width: 35%;
+    }
+    .team-about {
+        width:60%
     }
 }
