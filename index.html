@@ -32,7 +32,7 @@
     <!--canvas area-->
     <div class="canvas-wrapper hidden">
 <div class="canvas-area flex justify-center flex-wrap">
-    <div class="close"><i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
+    <div class="close" onclick="closeElement('canvas')"><i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
     </div>
 
     <!--set default image on the canvas-->
@@ -57,13 +57,14 @@
             <input type="color" class="stroke-color-top" onclick="changeTxtColor('top','stroke')"></button>
             
              <div class="shadow-tools">
+                 <span>Shadow</span>
                 <input type="color" class="top-shadow-color">
                 <input type="text" size="2" class="top-shadow-offset-x">
                 <input type="text" size="2" class="top-shadow-offset-y">
                 <button onclick="addShadow( 'top' )">Add</button>
             </div>
 
-            <div>
+            <div><span>Text</span>
             <input id="text-top" type="text" placeholder="enter some text" value=""/><br>            
             </div>
 
@@ -93,14 +94,12 @@
             <button onclick="draw()">Send</button><button onclick="saveImg()">Save</button>
             
             </div>
-        </div>
-
-       
-
-        
+            
+        </div>                
     </div>
-    <!--end tool editor-->
+    <!--end tool editor-->    
 </div>
+<a href="#">Back</a>
 </div>
 <!--end canvas area-->
 

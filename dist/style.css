@@ -712,5 +712,9 @@ footer {
     cursor: pointer; }
   .canvas-area .tools-editor {
     margin: 50px 0 0 0; }
+  .canvas-area .style-icons {
+    padding: 5px;
+    background: lightgray;
+    margin: 0 0 3px 5px; }
   .canvas-area .shadow-tools {
     clear: both; }

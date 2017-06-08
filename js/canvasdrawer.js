@@ -17,7 +17,7 @@ gCanvasStyle = {
   txtYpos: canvasHeight - (canvasHeight / 4.5),
   txts: [
     { color: 'red', fontSize: 30, align: 'center', fillStyle: 'white', 
-    strokeStyle: 'black',shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 },
+    strokeStyle: 'black',shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0, addShadow: false },
 
     { color: 'blue', fontSize: 30, align: 'center', fillStyle: 'white', 
     strokeStyle: 'black', shadowColor: '',shadowOffsetX: 0, shadowOffsetY: 0 }
@@ -237,6 +237,18 @@ function clearInput( pos ){
     else
       gTopTxt.value = '';
   draw();
+}
+
+function closeElement( el ){
+  var thumbArea  = document.querySelector('.thumb-wrapper');
+  if(el === 'canvas'){
+    var canvasArea = document.querySelector('.canvas-wrapper');
+    canvasArea.classList.add('hidden');
+    thumbArea.classList.remove('hidden');
+  }
+  
+  
+
 }
 //  bugs to fix
 // changing color does not work correctly
