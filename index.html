@@ -22,8 +22,19 @@
     <div class="header-triangle"></div>
 </header>
 <div class="container">
+    <div class="popular-words flex justify-center  space-between align-center ">
+        <div class="search">
+            Search image:
+            <label for="search"><input id="search" type="text" placeholder=""></label>
+            <input type="submit" class="btn" value="Find">
+        </div>
+        <div class="popular">
+            <h2>Tags by popular words</h2>
+            <div class="popular-words-container flex flex-wrap justify-center "></div>
+        </div>
+    </div>
     <!--thumb list-->
-    <div class="thumb-wrapper">
+    <div class="thumb-wrapper flex flex-wrap justify-center">
         <div class="thumb-list flex flex-wrap justify-center space-between">
         </div>
     </div>
@@ -182,7 +193,7 @@
         </div>
     </div>
 </footer>
-<script src="assets/lib/jquery-3.2.1.min.js"></script>
+<script src="js/tools.js"></script>
 <script src="js/script.js"></script>
 <script src="js/canvasdrawer.js"></script>
 </body>

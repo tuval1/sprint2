@@ -5,7 +5,7 @@ var gImgs = [
     {id: 1, url: 'assets/img/1.jpg', keyword: ['sad','dog']},
     {id: 2, url: 'assets/img/2.jpg', keyword: ['animal','sad']},
     {id: 3, url: 'assets/img/3.jpg', keyword: ['animal', 'cat']},
-    {id: 4, url: 'assets/img/4.jpg', keyword: ['animal']},
+    {id: 4, url: 'assets/img/4.jpg', keyword: ['girl']},
     {id: 5, url: 'assets/img/5.jpg', keyword: ['animal', 'dog']},
     {id: 6, url: 'assets/img/6.jpg', keyword: ['animal', 'dog']},
     {id: 7, url: 'assets/img/7.jpg', keyword: ['animal','funny', 'sarcasm']}
@@ -49,7 +49,7 @@ function searchPopularWords() {
 }
 
 function renderPopularWords() {
-    var el = document.querySelector('.thumb-wrapper');
+    var el = document.querySelector('.popular-words-container');
     var words = searchPopularWords();
     var strHtml ='';
 
@@ -59,6 +59,7 @@ function renderPopularWords() {
         link.innerText = word;
         link.title = word;
         link.style.fontSize = words[word]*10 + 'px';
+        link.style.color = getRandomColor();
         link.addEventListener('click', renderImgsByWord);
         el.append(link);
     }
@@ -80,6 +81,7 @@ function clearThumbList() {
     var el = document.querySelector('.thumb-list');
     el.innerText = '';
 }
+
 
 renderImgsList(gImgs, '.thumb-list');
 renderPopularWords('.thumb-list');

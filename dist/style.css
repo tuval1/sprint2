@@ -527,7 +527,7 @@ header {
     position: relative;
     width: 160px;
     height: 92.38px;
-    margin: 46.19px 0;
+    margin: 46.19px 15px;
     background-image: url(http://csshexagon.com/img/meow.jpg);
     background-size: auto 184.7521px;
     background-position: center; }
@@ -696,6 +696,25 @@ footer {
           margin-bottom: 5px; }
         footer .cont .inner-container .content .footer-content i {
           margin-right: 10px; }
+
+.popular-words {
+  width: 100%;
+  height: auto;
+  margin: 10px auto 60px auto;
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+  .popular-words h2 {
+    text-align: center; }
+  .popular-words .popular-words-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    .popular-words .popular-words-container a {
+      margin: 10px;
+      text-transform: capitalize; }
+  .popular-words .search {
+    margin-top: 30px; }
+    .popular-words .search input {
+      margin: 10px; }
+    .popular-words .search .btn {
+      padding: 5px 8px; }
 
 .canvas-area {
   position: relative; }
