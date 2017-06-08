@@ -11,6 +11,16 @@ var gImgs = [
     {id: 7, url: 'assets/img/7.jpg', keyword: ['animal','funny', 'sarcasm']}
 ];
 
+
+function init(){  
+//set width to the canvas
+  gCanvas.width  = canvasWidth;
+  gCanvas.height = canvasHeight;
+
+  renderImgsList(gImgs, '.thumb-list');
+  renderPopularWords();
+}
+
 function renderImgsList(imgs) {
     var el = document.querySelector('.thumb-list');
     imgs.forEach(function (img) {
@@ -33,6 +43,8 @@ function createHex(img) {
     hex.setAttribute('onclick', 'setCanvasImg(this,' + img.id + ')');
     return hex;
 }
+
+
 
 function searchPopularWords() {
 
@@ -110,5 +122,15 @@ function sliderTeam() {
 }
 
 
-renderImgsList(gImgs, '.thumb-list');
-renderPopularWords();
+
+
+
+function closeElement( el ){
+  var thumbArea  = document.querySelector('.thumb-wrapper');
+  var canvasArea = document.querySelector('.canvas-wrapper');
+  if(el === 'canvas'){
+    
+    canvasArea.classList.add('hidden');
+    thumbArea.classList.remove('hidden');
+  }
+}

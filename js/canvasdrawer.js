@@ -25,12 +25,6 @@ gCanvasStyle = {
 };
 
 
-function init(){
-  
-//set width to the canvas
-  gCanvas.width  = canvasWidth;
-  gCanvas.height = canvasHeight;
-}
 
 //change text inside the canvas on live
   gBottomTxt.addEventListener('keydown', draw);
@@ -239,16 +233,6 @@ function clearInput( pos ){
   draw();
 }
 
-function closeElement( el ){
-  var thumbArea  = document.querySelector('.thumb-wrapper');
-  if(el === 'canvas'){
-    var canvasArea = document.querySelector('.canvas-wrapper');
-    canvasArea.classList.add('hidden');
-    thumbArea.classList.remove('hidden');
-  }
-  
-  
 
-}
 //  bugs to fix
 // changing color does not work correctly
